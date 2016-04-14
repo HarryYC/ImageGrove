@@ -2526,3 +2526,30 @@ h2.title {
 }
 
 
+.list-group-item{
+    
+    text-align:center;
+    color:black;
+    font-size:15px;
+    font-family: 'Roboto', sans-serif;
+}
+#adminList{
+     
+  display: block;
+  margin-bottom:20px;
+  margin-top: 20px;
+  overflow: hidden;
+
+}
+#userList{
+    
+    display :block;
+    margin-bottom: 120px;
+    margin-top: 20 px;
+    overflow:hidden;
+   
+}
+
+.fa-arrow-left{
+    color:gray;
+}
