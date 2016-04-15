@@ -1,541 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Home</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/font-awesome.min.css" rel="stylesheet">
-      <link href="css/prettyPhoto.css" rel="stylesheet">
-      <link href="css/price-range.css" rel="stylesheet">
-      <link href="css/animate.css" rel="stylesheet">
-      <link href="css/main.css" rel="stylesheet">
-      <link href="css/responsive.css" rel="stylesheet">
-      <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-      <![endif]-->       
-      <link rel="shortcut icon" href="images/ico/favicon.ico">
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-      <link rel="stylesheet" href="http://static.hdslb.com/css/core-v5/page-core.css" type="text/css" />
-      <link rel="stylesheet" href="http://static.hdslb.com/spacev2/css/zero.css?v=20160412eleccc">
-   </head>
-   <!--/head-->
-   <body>
-      <header id="header">
-         <!--header-->
-         <div class="header_top">
-            <!--header_top-->
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-6">
-                     <div class="contactinfo">
-                        <ul class="nav nav-pills">
-                           <li><a href="#"><i class="fa fa-phone"></i> (415)555 - 5555</a></li>
-                           <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                     <div class="social-icons pull-right">
-                        <ul class="nav navbar-nav">
-                           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!--/header_top-->
-         <div class="header-middle">
-            <!--header-middle-->
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-4">
-                     <div class="logo pull-left">
-                        <a href="index.html">COMPANY_LOGO</a>
-                     </div>
-                  </div>
-                  <div class="col-sm-8">
-                     <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                           <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                           <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                           <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                           <!--<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>-->
-                           <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!--/header-middle-->
-         <div class="header-bottom">
-            <!--header-bottom-->
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-9">
-                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                     </div>
-                     <div class="mainmenu pull-left">
-                        <ul class="nav navbar-nav collapse navbar-collapse">
-                           <li><a href="index.html" class="active">Home</a></li>
-                           <li class="dropdown">
-                              <a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                              <ul role="menu" class="sub-menu">
-                                 <li><a href="./shop.php?search_string=test">Products</a></li>
-                                 <li><a href="#">Checkout</a></li>
-                                 <li><a href="./login.html">Login</a></li>
-                              </ul>
-                           </li>
-                           <li><a href="./contact-us.html">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!--/header-bottom-->
-      </header>
-      <!--/header-->
-      <div id="contact-page" class="container">
-         <div class="row">
-            <div class="col-sm-12">
-               <h2 class="title text-center">Artist Info</h2>
-               <div class="h">
-                  <div class="wrapper">
-                     <div class="h-container" style="background-image: url(./images/artist/background.png);">
-                        <div class="h-main">
-                           <div class="h-user-info unfollowed">
-                              <div class="h-avatar-container">
-                                 <div class="h-avatar">
-                                    <img src="" id="h-g">
-                                    <img src="./images/artist/portrait.jpg" id="h-avatar" come-on-click-me!!="">
-                                    <a href="#" id="h-change-avatar" class="host" target="_blank">portrait</a>
-                                 </div>
-                              </div>
-                              <div class="h-meta">
-                                 <div class="h-name">
-                                    <span id="h-name">Alice</span>
-                                 </div>
-                                 <div class="h-sign" title="about">Something about her</div>
-                                 <span class="btn follow h-btn"><span class="icon"></span>Add</span>
-                                 <span class="btn unfollow h-btn">Added</span>
-                                 <a class="btn h-btn" target="_blank" id="h-msg-btn" href="#">Chat</a>
-                              </div>
-                           </div>
-                           <div class="h-bg-container overlay">
-                              <div class="h-bg-blur overlay"></div>
-                              <div class="h-bg overlay" style="background-image: url(./images/artist/background.png);"></div>
-                           </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Home</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+        <link href="css/price-range.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->       
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="stylesheet" href="http://static.hdslb.com/css/core-v5/page-core.css" type="text/css" />
+        <link rel="stylesheet" href="http://static.hdslb.com/spacev2/css/zero.css?v=20160412eleccc">
+    </head>
+    <!--/head-->
+    <body>
+        <header id="header">
+            <!--header-->
+            <div class="header_top"><!--header_top-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="contactinfo">
+                                <ul class="nav nav-pills">
+                                    <li><a href="#"><i class="fa fa-phone"></i> (415)555 - 5555</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-sm-12">
-               <h2 class="title text-center"></h2>
-               <br><br><br>
-               <div class="container-row">
-                  <div class="b-section-head"></div>
-                  <div class="b-section-body">
-                     <div class="b-l">
-                        <div class="b-head">
-                           <span class="b-head-i"></span>
-                           <span class="b-head-t">
-                              <a href="#" title="music">
-                                 <h2>Latest Releases</h2>
-                              </a>
-                           </span>
-                           <div class="b-link-more"><a href="#">More<i class="b-icon b-icon-arrow-r"></i></a></div>
-                           <div class="read-push" style="display: block;"><span class="icon-refresh"></span></div>
+                        <div class="col-sm-6">
+                            <div class="social-icons pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="b-body">
-                           <ul class="vidbox v-list">
-                              <li data-gk="30177" data-sc="1881" data-pl="630" data-dm="868" data-up="somedata" data-subtitle="" data-lm="" data-tg="2016-04-12 06:07" data-txt="" data-yb="2354">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="abc">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/1.jpg" loaded="loaded" alt="abc" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="abc">
-                                       <div class = "a">pus</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="106550" data-sc="3535" data-pl="2665" data-dm="2011" data-up="QAQ" data-subtitle="" data-lm="" data-tg="2016-04-11 19:54" data-txt="a" data-yb="5069">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="titleBB">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/2.jpg" loaded="loaded" alt="titleBB" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="titleBB">
-                                       <div>titleBB</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="103510" data-sc="17059" data-pl="4632" data-dm="2671" data-up="PFT" data-subtitle="" data-lm="" data-tg="2016-04-11 20:02" data-txt="tag" data-yb="15377">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="pv">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/3.jpg" loaded="loaded" alt="pv" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="pv">
-                                       <div>pv</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="6871" data-sc="80" data-pl="4" data-dm="73" data-up="data" data-subtitle="" data-lm="" data-tg="2013-11-10 01:54" data-txt="tag" data-yb="1">
-                                 <div class="v">
-                                    <a class="preview" href="#" target="_blank" title="Fortunate Son">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/4.jpg" loaded="loaded" alt="Fortunate Son" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Fortunate Son">
-                                       <div>Fortunate Son</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="242074" data-sc="5095" data-pl="263" data-dm="3901" data-up="upup" data-subtitle="God knows" data-lm="" data-tg="2014-09-25 20:44" data-txt="tag" data-yb="1091">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="God knows">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/5.jpg" loaded="loaded" alt="God knows" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="God knows">
-                                       <div>God knows</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="14268" data-sc="779" data-pl="64" data-dm="2949" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-09 01:02" data-txt="tag" data-yb="207">
-                                 <div class="v m200">
-                                    <a class="preview" href="#" target="_blank" title="Live 2015">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/6.jpg" loaded="loaded" alt="Hacken Lee Concert L" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Hacken Lee Concert L">
-                                       <div>Hacken Lee Concert L</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="1734" data-sc="195" data-pl="60" data-dm="76" data-up="up" data-subtitle="" data-lm="" data-tg="2016-04-11 18:02" data-txt="tag" data-yb="171">
-                                 <div class="v">
-                                    <a class="preview" href="#" target="_blank" title="Say Something">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/7.jpg" loaded="loaded" alt="Say Something" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Say Something">
-                                       <div>Say Something</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="8081" data-sc="585" data-pl="228" data-dm="398" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-21 13:18" data-txt="text" data-yb="574">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="Spring">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/8.jpg" loaded="loaded" alt="Spring</br>" style="opacity: 1;"></br></br></br></br></br>
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Spring">
-                                       <div>Spring</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="31990" data-sc="2939" data-pl="1249" data-dm="2349" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-04-12 14:12" data-txt="text" data-yb="3737">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="White Head">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/9.jpg" loaded="loaded" alt="White Head" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="White Head">
-                                       <div>White Head</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="22728" data-sc="693" data-pl="119" data-dm="763" data-up="SolPie" data-subtitle="" data-lm="" data-tg="2014-09-05 19:38" data-txt="text" data-yb="207">
-                                 <div class="v m200">
-                                    <a class="preview" href="#" target="_blank" title="SolPie">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/10.jpg" loaded="loaded" alt="SolPie" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="SolPie">
-                                       <div>SolPie</div>
-                                    </a>
-                                 </div>
-                              </li>
-                           </ul>
+                    </div>
+                </div>
+            </div><!--/header_top-->
+
+            <div class="header-middle"><!--header-middle-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="logo pull-left">
+                                <a href="index.html"><img src="images/home/Logo.PNG" alt="ImageGrove" /></a>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  </a></li></ul>
-                  <ul class="rlist"></ul>
-               </div>
-               <br><br><br>
-               <div class="container-row">
-                  <div class="b-section-head"></div>
-                  <div class="b-section-body">
-                     <div class="b-l">
-                        <div class="b-head">
-                           <span class="b-head-i"></span>
-                           <span class="b-head-t">
-                              <a href="#" title="music">
-                                 <h2>Most Popular</h2>
-                              </a>
-                           </span>
-                           <div class="b-link-more"><a href="#">More<i class="b-icon b-icon-arrow-r"></i></a></div>
-                           <div class="read-push" style="display: block;"><span class="icon-refresh"></span></div>
+                        <div class="col-sm-8">
+                            <div class="shop-menu pull-right">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li><a href="AdminPage.html">Admin</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
+
+                                    <li><a href="./login.html"><i class="fa fa-sign-out"></i> LogOut</a></li>
+
+                                </ul>
+                            </div>
                         </div>
-                        <div class="b-body">
-                           <ul class="vidbox v-list">
-                              <li data-gk="30177" data-sc="1881" data-pl="630" data-dm="868" data-up="somedata" data-subtitle="" data-lm="" data-tg="2016-04-12 06:07" data-txt="" data-yb="2354">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="abc">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/11.jpg" loaded="loaded" alt="abc" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="abc">
-                                       <div class = "a">pus</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="106550" data-sc="3535" data-pl="2665" data-dm="2011" data-up="QAQ" data-subtitle="" data-lm="" data-tg="2016-04-11 19:54" data-txt="a" data-yb="5069">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="titleBB">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/12.jpg" loaded="loaded" alt="titleBB" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="titleBB">
-                                       <div>titleBB</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="103510" data-sc="17059" data-pl="4632" data-dm="2671" data-up="PFT" data-subtitle="" data-lm="" data-tg="2016-04-11 20:02" data-txt="tag" data-yb="15377">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="pv">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/13.jpg" loaded="loaded" alt="pv" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="pv">
-                                       <div>pv</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="6871" data-sc="80" data-pl="4" data-dm="73" data-up="data" data-subtitle="" data-lm="" data-tg="2013-11-10 01:54" data-txt="tag" data-yb="1">
-                                 <div class="v">
-                                    <a class="preview" href="#" target="_blank" title="Fortunate Son">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/14.jpg" loaded="loaded" alt="Fortunate Son" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Fortunate Son">
-                                       <div>Fortunate Son</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="242074" data-sc="5095" data-pl="263" data-dm="3901" data-up="upup" data-subtitle="God knows" data-lm="" data-tg="2014-09-25 20:44" data-txt="tag" data-yb="1091">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="God knows">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/15.jpg" loaded="loaded" alt="God knows" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="God knows">
-                                       <div>God knows</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="14268" data-sc="779" data-pl="64" data-dm="2949" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-09 01:02" data-txt="tag" data-yb="207">
-                                 <div class="v m200">
-                                    <a class="preview" href="#" target="_blank" title="Live 2015">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/16.jpg" loaded="loaded" alt="Hacken Lee Concert L" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Hacken Lee Concert L">
-                                       <div>Hacken Lee Concert L</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="1734" data-sc="195" data-pl="60" data-dm="76" data-up="up" data-subtitle="" data-lm="" data-tg="2016-04-11 18:02" data-txt="tag" data-yb="171">
-                                 <div class="v">
-                                    <a class="preview" href="#" target="_blank" title="Say Something">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/17.jpg" loaded="loaded" alt="Say Something" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Say Something">
-                                       <div>Say Something</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="8081" data-sc="585" data-pl="228" data-dm="398" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-21 13:18" data-txt="text" data-yb="574">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="Spring">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/18.jpg" loaded="loaded" alt="Spring</br>" style="opacity: 1;"></br></br></br></br></br>
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="Spring">
-                                       <div>Spring</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="31990" data-sc="2939" data-pl="1249" data-dm="2349" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-04-12 14:12" data-txt="text" data-yb="3737">
-                                 <div class="v m300">
-                                    <a class="preview" href="#" target="_blank" title="White Head">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/19.jpg" loaded="loaded" alt="White Head" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="White Head">
-                                       <div>White Head</div>
-                                    </a>
-                                 </div>
-                              </li>
-                              <li data-gk="22728" data-sc="693" data-pl="119" data-dm="763" data-up="SolPie" data-subtitle="" data-lm="" data-tg="2014-09-05 19:38" data-txt="text" data-yb="207">
-                                 <div class="v m200">
-                                    <a class="preview" href="#" target="_blank" title="SolPie">
-                                       <div class="medal"></div>
-                                       <div class="original"></div>
-                                       <div class="border"></div>
-                                       <img data-img="" src="./images/product-details/10.jpg" loaded="loaded" alt="SolPie" style="opacity: 1;">
-                                       <div class="x"><b class="x2">Buy</b></div>
-                                    </a>
-                                    <a href="#" target="_blank" title="SolPie">
-                                       <div>SolPie</div>
-                                    </a>
-                                 </div>
-                              </li>
-                           </ul>
+                    </div>
+                </div>
+            </div><!--/header-middle-->
+            <div class="header-bottom"><!--header-bottom-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="mainmenu pull-left">
+                                <ul class="nav navbar-nav collapse navbar-collapse">
+                                    <li><a href="index.html" class="active">Home</a></li>
+                                    <!--                                    <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                                                                            <ul role="menu" class="sub-menu">
+                                                                                <li><a href="./shop.php?search_string=test">Products</a></li>
+                                                                                <li><a href="#">Checkout</a></li>
+                                                                                <li><a href="./login.html">Login</a></li> 
+                                                                            </ul>
+                                                                        </li> -->
+                                    <li><a href="./browse.html">Browse by Category</a></li>
+                                    <li><a href="./contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-                  </a></li></ul>
-                  <ul class="rlist"></ul>
-               </div>
+                    </div>
+                </div>
+            </div><!--/header-bottom-->
+        </header>
+        <!--/header-->
+        <div id="contact-page" class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="title text-center">Artist Info</h2>
+                    <div class="h">
+                        <div class="wrapper">
+                            <div class="h-container" style="background-image: url(./images/artist/background.png);">
+                                <div class="h-main">
+                                    <div class="h-user-info unfollowed">
+                                        <div class="h-avatar-container">
+                                            <div class="h-avatar">
+                                                <img src="" id="h-g">
+                                                <img src="./images/artist/portrait.jpg" id="h-avatar" come-on-click-me!!="">
+                                                     <a href="#" id="h-change-avatar" class="host" target="_blank">portrait</a>
+                                            </div>
+                                        </div>
+                                        <div class="h-meta">
+                                            <div class="h-name">
+                                                <span id="h-name">Alice</span>
+                                            </div>
+                                            <div class="h-sign" title="about">Something about her</div>
+                                            <span class="btn follow h-btn"><span class="icon"></span>Add</span>
+                                            <span class="btn unfollow h-btn">Added</span>
+                                            <a class="btn h-btn" target="_blank" id="h-msg-btn" href="#">Chat</a>
+                                        </div>
+                                    </div>
+                                    <div class="h-bg-container overlay">
+                                        <div class="h-bg-blur overlay"></div>
+                                        <div class="h-bg overlay" style="background-image: url(./images/artist/background.png);"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      <footer id="footer">
-         <!--Footer-->
-         <div class="footer-top">
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-2">
-                     <div class="companyinfo">
-                        <h2><span>Company</span></h2>
-                        <p>Something about our company</p>
-                     </div>
-                  </div>
-                  <div class="col-sm-3">
-                     <div class="address">
-                        <img src="images/home/map.png" alt="">
-                        <p>1600 Halloway, San Francisco</p>
-                     </div>
-                  </div>
-               </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="title text-center"></h2>
+                    <br><br><br>
+                    <div class="container-row">
+                        <div class="b-section-head"></div>
+                        <div class="b-section-body">
+                            <div class="b-l">
+                                <div class="b-head">
+                                    <span class="b-head-i"></span>
+                                    <span class="b-head-t">
+                                        <a href="#" title="music">
+                                            <h2>Latest Releases</h2>
+                                        </a>
+                                    </span>
+                                    <div class="b-link-more"><a href="#">More<i class="b-icon b-icon-arrow-r"></i></a></div>
+                                    <div class="read-push" style="display: block;"><span class="icon-refresh"></span></div>
+                                </div>
+                                <div class="b-body">
+                                    <ul class="vidbox v-list">
+                                        <li data-gk="30177" data-sc="1881" data-pl="630" data-dm="868" data-up="somedata" data-subtitle="" data-lm="" data-tg="2016-04-12 06:07" data-txt="" data-yb="2354">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="abc">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/1.jpg" loaded="loaded" alt="abc" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="abc">
+                                                    <div class = "a">pus</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="106550" data-sc="3535" data-pl="2665" data-dm="2011" data-up="QAQ" data-subtitle="" data-lm="" data-tg="2016-04-11 19:54" data-txt="a" data-yb="5069">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="titleBB">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/2.jpg" loaded="loaded" alt="titleBB" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="titleBB">
+                                                    <div>titleBB</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="103510" data-sc="17059" data-pl="4632" data-dm="2671" data-up="PFT" data-subtitle="" data-lm="" data-tg="2016-04-11 20:02" data-txt="tag" data-yb="15377">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="pv">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/3.jpg" loaded="loaded" alt="pv" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="pv">
+                                                    <div>pv</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="6871" data-sc="80" data-pl="4" data-dm="73" data-up="data" data-subtitle="" data-lm="" data-tg="2013-11-10 01:54" data-txt="tag" data-yb="1">
+                                            <div class="v">
+                                                <a class="preview" href="#" target="_blank" title="Fortunate Son">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/4.jpg" loaded="loaded" alt="Fortunate Son" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Fortunate Son">
+                                                    <div>Fortunate Son</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="242074" data-sc="5095" data-pl="263" data-dm="3901" data-up="upup" data-subtitle="God knows" data-lm="" data-tg="2014-09-25 20:44" data-txt="tag" data-yb="1091">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="God knows">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/5.jpg" loaded="loaded" alt="God knows" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="God knows">
+                                                    <div>God knows</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="14268" data-sc="779" data-pl="64" data-dm="2949" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-09 01:02" data-txt="tag" data-yb="207">
+                                            <div class="v m200">
+                                                <a class="preview" href="#" target="_blank" title="Live 2015">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/6.jpg" loaded="loaded" alt="Hacken Lee Concert L" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Hacken Lee Concert L">
+                                                    <div>Hacken Lee Concert L</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="1734" data-sc="195" data-pl="60" data-dm="76" data-up="up" data-subtitle="" data-lm="" data-tg="2016-04-11 18:02" data-txt="tag" data-yb="171">
+                                            <div class="v">
+                                                <a class="preview" href="#" target="_blank" title="Say Something">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/7.jpg" loaded="loaded" alt="Say Something" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Say Something">
+                                                    <div>Say Something</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="8081" data-sc="585" data-pl="228" data-dm="398" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-21 13:18" data-txt="text" data-yb="574">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="Spring">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/8.jpg" loaded="loaded" alt="Spring</br>" style="opacity: 1;"></br></br></br></br></br>
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Spring">
+                                                    <div>Spring</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="31990" data-sc="2939" data-pl="1249" data-dm="2349" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-04-12 14:12" data-txt="text" data-yb="3737">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="White Head">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/9.jpg" loaded="loaded" alt="White Head" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="White Head">
+                                                    <div>White Head</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="22728" data-sc="693" data-pl="119" data-dm="763" data-up="SolPie" data-subtitle="" data-lm="" data-tg="2014-09-05 19:38" data-txt="text" data-yb="207">
+                                            <div class="v m200">
+                                                <a class="preview" href="#" target="_blank" title="SolPie">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/10.jpg" loaded="loaded" alt="SolPie" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="SolPie">
+                                                    <div>SolPie</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </a></li></ul>
+                        <ul class="rlist"></ul>
+                    </div>
+                    <br><br><br>
+                    <div class="container-row">
+                        <div class="b-section-head"></div>
+                        <div class="b-section-body">
+                            <div class="b-l">
+                                <div class="b-head">
+                                    <span class="b-head-i"></span>
+                                    <span class="b-head-t">
+                                        <a href="#" title="music">
+                                            <h2>Most Popular</h2>
+                                        </a>
+                                    </span>
+                                    <div class="b-link-more"><a href="#">More<i class="b-icon b-icon-arrow-r"></i></a></div>
+                                    <div class="read-push" style="display: block;"><span class="icon-refresh"></span></div>
+                                </div>
+                                <div class="b-body">
+                                    <ul class="vidbox v-list">
+                                        <li data-gk="30177" data-sc="1881" data-pl="630" data-dm="868" data-up="somedata" data-subtitle="" data-lm="" data-tg="2016-04-12 06:07" data-txt="" data-yb="2354">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="abc">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/11.jpg" loaded="loaded" alt="abc" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="abc">
+                                                    <div class = "a">pus</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="106550" data-sc="3535" data-pl="2665" data-dm="2011" data-up="QAQ" data-subtitle="" data-lm="" data-tg="2016-04-11 19:54" data-txt="a" data-yb="5069">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="titleBB">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/12.jpg" loaded="loaded" alt="titleBB" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="titleBB">
+                                                    <div>titleBB</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="103510" data-sc="17059" data-pl="4632" data-dm="2671" data-up="PFT" data-subtitle="" data-lm="" data-tg="2016-04-11 20:02" data-txt="tag" data-yb="15377">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="pv">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/13.jpg" loaded="loaded" alt="pv" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="pv">
+                                                    <div>pv</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="6871" data-sc="80" data-pl="4" data-dm="73" data-up="data" data-subtitle="" data-lm="" data-tg="2013-11-10 01:54" data-txt="tag" data-yb="1">
+                                            <div class="v">
+                                                <a class="preview" href="#" target="_blank" title="Fortunate Son">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/14.jpg" loaded="loaded" alt="Fortunate Son" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Fortunate Son">
+                                                    <div>Fortunate Son</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="242074" data-sc="5095" data-pl="263" data-dm="3901" data-up="upup" data-subtitle="God knows" data-lm="" data-tg="2014-09-25 20:44" data-txt="tag" data-yb="1091">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="God knows">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/15.jpg" loaded="loaded" alt="God knows" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="God knows">
+                                                    <div>God knows</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="14268" data-sc="779" data-pl="64" data-dm="2949" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-09 01:02" data-txt="tag" data-yb="207">
+                                            <div class="v m200">
+                                                <a class="preview" href="#" target="_blank" title="Live 2015">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/16.jpg" loaded="loaded" alt="Hacken Lee Concert L" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Hacken Lee Concert L">
+                                                    <div>Hacken Lee Concert L</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="1734" data-sc="195" data-pl="60" data-dm="76" data-up="up" data-subtitle="" data-lm="" data-tg="2016-04-11 18:02" data-txt="tag" data-yb="171">
+                                            <div class="v">
+                                                <a class="preview" href="#" target="_blank" title="Say Something">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/17.jpg" loaded="loaded" alt="Say Something" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Say Something">
+                                                    <div>Say Something</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="8081" data-sc="585" data-pl="228" data-dm="398" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-02-21 13:18" data-txt="text" data-yb="574">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="Spring">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/18.jpg" loaded="loaded" alt="Spring</br>" style="opacity: 1;"></br></br></br></br></br>
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="Spring">
+                                                    <div>Spring</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="31990" data-sc="2939" data-pl="1249" data-dm="2349" data-up="upup" data-subtitle="" data-lm="" data-tg="2016-04-12 14:12" data-txt="text" data-yb="3737">
+                                            <div class="v m300">
+                                                <a class="preview" href="#" target="_blank" title="White Head">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/19.jpg" loaded="loaded" alt="White Head" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="White Head">
+                                                    <div>White Head</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li data-gk="22728" data-sc="693" data-pl="119" data-dm="763" data-up="SolPie" data-subtitle="" data-lm="" data-tg="2014-09-05 19:38" data-txt="text" data-yb="207">
+                                            <div class="v m200">
+                                                <a class="preview" href="#" target="_blank" title="SolPie">
+                                                    <div class="medal"></div>
+                                                    <div class="original"></div>
+                                                    <div class="border"></div>
+                                                    <img data-img="" src="./images/product-details/10.jpg" loaded="loaded" alt="SolPie" style="opacity: 1;">
+                                                    <div class="x"><b class="x2">Buy</b></div>
+                                                </a>
+                                                <a href="#" target="_blank" title="SolPie">
+                                                    <div>SolPie</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </a></li></ul>
+                        <ul class="rlist"></ul>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="footer-bottom">
-            <div class="container">
-               <div class="row">
-                  <p class="pull-left">Copyright ? 2013 Company_Name. All rights reserved.</p>
-               </div>
+        </div>
+
+        <footer id="footer">
+            <!--Footer-->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="companyinfo">
+                                <h2><span><img src="images/home/Logo.PNG" alt="ImageGrove" /></span></h2>
+                                <p>The home for all your images</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="address">
+                                <img src="images/home/map.png" alt="" />
+                                <p>1600 Holloway, San Francisco</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </footer>
-      <script src="js/jquery.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.scrollUp.min.js"></script>
-      <script src="js/price-range.js"></script>
-      <script src="js/jquery.prettyPhoto.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+            
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <p class="pull-left">Copyright © 2016 Image Grove. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/price-range.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

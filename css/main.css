@@ -886,6 +886,12 @@ h2.title {
   width: 100%;
 }
 
+.productinfo img:hover{
+  width: 100%;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
 .productinfo{
  position:relative;
 }
@@ -1145,7 +1151,7 @@ h2.title {
 **************************/
 
 .product-details{
-	overflow:hidden;
+    overflow:hidden;
 }
 
 
@@ -1169,8 +1175,6 @@ h2.title {
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
-
-
 
 .view-product {
   position: relative;

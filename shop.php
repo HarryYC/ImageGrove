@@ -57,18 +57,22 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href="index.html"><img src="images/home/Logo.png" alt="ImageGrove" /></a>
+                                <a href="index.html"><img src="images/home/Logo.PNG" alt="ImageGrove" /></a>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-<!-- P2                                   <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>-->
-<!--                                    <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>-->
-                                    <!--<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>-->
-                                    <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
-                                </ul>
+                                <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
+                                                <ul role="menu" class="sub-menu">
+                                                    <li><a href="AdminPage.html">Admin</a></li>
+                                                </ul>
+                                            </li>
+                                <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
+                         
+                                <li><a href="./login.html"><i class="fa fa-sign-out"></i> LogOut</a></li>
+
+                            </ul>
                             </div>
                         </div>
                     </div>
@@ -278,8 +282,8 @@
                     <div class="row">
                         <div class="col-sm-2">
                             <div class="companyinfo">
-                                <h2><span>Company</span></h2>
-                                <p>Something about our company</p>
+                                <h2><span><img src="images/home/Logo.PNG" alt="ImageGrove" /></span></h2>
+                                <p>The home for all your images</p>
                             </div>
                         </div>
 
@@ -362,7 +366,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="row">
-                        <p class="pull-left">Copyright © 2013 Company_Name. All rights reserved.</p>
+                        <p class="pull-left">Copyright © 2016 Image Grove. All rights reserved.</p>
                     </div>
                 </div>
             </div>
