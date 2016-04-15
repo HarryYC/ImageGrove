@@ -187,7 +187,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li {
-	display:inline-block;
+  display:inline-block;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -320,7 +320,7 @@ ul.sub-menu {
 }
 
 .navbar-nav li ul.sub-menu li a:hover{
-    color: 037FEA;
+    color: #037FEA;
 }
 
 .fa-angle-down{
@@ -2545,7 +2545,7 @@ h2.title {
     
     display :block;
     margin-bottom: 120px;
-    margin-top: 20 px;
+    margin-top: 20px;
     overflow:hidden;
    
 }
@@ -2553,3 +2553,17 @@ h2.title {
 .fa-arrow-left{
     color:gray;
 }
+
+.shop-menu .sub-menu li a:hover :focus {
+    color:black;/*color turns white if not changed*/
+    background:transparent;           
+}
+
+
+
+
+.shop-menu ul li a:hover {
+	color:#3CC47C;
+	background:transparent;
+}
+
