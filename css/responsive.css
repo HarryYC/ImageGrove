@@ -525,3 +525,32 @@ ul.sub-menu{
 }
 
 }
+
+.imageControlsAndShare>.fa:hover,
+.imageControlsAndShare > .fa:hover{
+    color: green!important;
+    transition: color .2s ease-in
+}
+
+.imageControlsAndShare>.fa-heart:hover,
+.imageControlsAndShare > .fa-heart:hover{
+    color: red!important;
+    transition: color .2s ease-in
+}
+
+.artistPortrait
+{
+    float: left;
+    display: inline-block;
+    padding: 10px;
+}
+
+.artInfo
+{
+    display: inline-block;
+}
+
+.artInfoHeader
+{
+  vertical-align: middle;
+}

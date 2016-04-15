@@ -57,18 +57,23 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href="index.html">COMPANY_LOGO</a>
+                                <a href="index.html"><img src="images/home/Logo.PNG" alt="ImageGrove" /></a>
                             </div>
                         </div>
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                    <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                    <!--<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>-->
-                                    <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
-                                </ul>
+                                <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
+                                                <ul role="menu" class="sub-menu">
+                                                    <li><a href="AdminPage.html">Admin</a></li>
+                                                </ul>
+                                            </li>
+                                <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
+                         
+                                <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                    <!--<li><a href="./login.html"><i class="fa fa-sign-out"></i> LogOut</a></li>-->
+
+                            </ul>
                             </div>
                         </div>
                     </div>
@@ -90,13 +95,14 @@
                             <div class="mainmenu pull-left">
                                 <ul class="nav navbar-nav collapse navbar-collapse">
                                     <li><a href="index.html" class="active">Home</a></li>
-                                    <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+<!--                                    <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                         <ul role="menu" class="sub-menu">
                                             <li><a href="./shop.php?search_string=test">Products</a></li>
                                             <li><a href="#">Checkout</a></li>
                                             <li><a href="./login.html">Login</a></li> 
                                         </ul>
-                                    </li> 
+                                    </li> -->
+                                    <li><a href="./browse.html">Browse by Category</a></li>
                                     <li><a href="./contact-us.html">Contact</a></li>
                                 </ul>
                             </div>
@@ -238,32 +244,64 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-9 padding-right">
+                    <div class="col-sm-9">
                         <div class="product-details"><!--product-details-->
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <div class="view-product">
                                     <?php echo "<img src='./PHP/get.php?id={$_GET['image_id']}&type=medium' />" ?>
                                 </div>
-
                             </div>
-                            <div class="col-sm-7">
-                                <div class="product-information"><!--/product-information-->
-                                    <h2><?php echo "{$_GET['image_title']}" ?></h2>
-                                    <p>Web ID: <?php echo "{$_GET['image_id']}" ?></p>
-                                    <span>
-                                        <span>US $59</span>
-                                        <button type="button" class="btn btn-fefault cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            Add to cart
-                                        </button>
-                                    </span>
-                                    <p><b>Artist:</b> E-SHOPPER</p>
-                                    <a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-                                </div><!--/product-information-->
+                            <div class="col-sm-2 imageControlsAndShare" style="white-space: nowrap; width: 2%;">
+                                <i data-toggle="tooltip" title="Zoom In" class="fa fa-plus-square fa-3x wow bounceIn"></i><br>
+                                <i data-toggle="tooltip" title="Zoom Out" class="fa fa-minus-square fa-3x wow bounceIn"></i><br>
+                                <i data-toggle="tooltip" title="Share on Facebook" class="fa fa-facebook-square fa-3x wow bounceIn"></i><br>
+                                <i data-toggle="tooltip" title="Share on Twitter" class="fa fa-twitter-square fa-3x wow bounceIn"></i><br>
+                                <i data-toggle="tooltip" title="Share on Pinterest" class="fa fa-pinterest-square fa-3x wow bounceIn"></i><br>
+                                <i data-toggle="tooltip" title="Save to Favorites" class="fa fa-heart fa-3x wow bounceIn"></i><br>
                             </div>
                         </div><!--/product-details-->
 
+                        <div class="container">
+                            <div class="row">
+                                <span>
+                                    <span>US $59</span> 
+                                    <button type="button" class="btn btn-fefault cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        Add to cart
+                                    </button>
+                                </span>                                
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4 artInfoHeader">
+                                    <div class="artistPortrait">
+                                        <!-- programmatically get artist image out of db -->
+                                        <?php echo "<img src=\"images/hardcode/pamartist.JPG\" height=\"50\" width=\"50\" />" ?>
+                                    </div>
+                                    <div class="artInfo">
+                                        <!-- dynamic data for title of piece, artist info, etc... -->
+                                        <div><?php echo "{$_GET['image_title']}" ?></div>
+                                        <div><?php echo "by Artist Name here" ?></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="padding: 12px">
+                                    <p>Web ID: <?php echo "{$_GET['image_id']}" ?></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="padding: 12px">
+                                    <p><?php echo "put description here" ?></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="padding: 12px">
+                                    <p><?php echo "put metadata here" ?></p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="category-tab shop-details-tab"><!--category-tab-->
+                            <!--    Disable tabs and content to conform to mocks. This is the details/artist profile section beneath the image
                             <div class="col-sm-12">
                                 <ul class="nav nav-tabs">
                                     <li><a href="#details" data-toggle="tab">Details</a></li>
@@ -273,7 +311,7 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade" id="details" >
                                 </div>
-
+    
                                 <div class="tab-pane fade" id="companyprofile" >
                                     <div class="col-sm-3">
                                         <div class="product-image-wrapper">
@@ -288,8 +326,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
+    
+                            </div> <!-- end of tabs section-->
                         </div><!--/category-tab-->
 
                     </div>
