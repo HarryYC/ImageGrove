@@ -1165,6 +1165,11 @@ h2.title {
   margin-top: 10px;
 }
 
+.product-details img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
 
 
 .view-product {
