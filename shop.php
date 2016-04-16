@@ -63,17 +63,18 @@
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
-                                                <ul role="menu" class="sub-menu">
-                                                    <li><a href="AdminPage.html">Admin</a></li>
-                                                </ul>
-                                            </li>
-                                <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
-                         
-                                <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                    <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li><a href="AdminPage.html">Admin</a></li>
+                                            <li><a href="ArtistPortfolio.html">Artist</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
+
+                                    <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
                                     <!--<li><a href="./login.html"><i class="fa fa-sign-out"></i> LogOut</a></li>-->
 
-                            </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -190,25 +191,25 @@
                                 </div>
                                 <br />
                                 <div class="text-center">
-                            <?php 
-                            if (isset($_POST['orientation']) && ($_POST['orientation'] != ""))
-                                $filter = "Orientation: ".$_POST['orientation'];
-                            else if (isset($_POST['size']) && ($_POST['size'] != ""))
-                                $filter = "Size: ".$_POST['size'];
-                            else if (isset($_POST['license']) && ($_POST['license'] != ""))
-                                $filter = "License: ". $_POST['license'];
-                            else if (isset($_POST['price_range']) && ($_POST['price_range'] != ""))
-                                $filter = "Price Range: ".$_POST['price_range'];
-                            if (isset($filter) && $filter != "")    
-                                echo "<h4>Filtering search by " . $filter. "</h4>"; 
-                            ?>
-                            </div>
+                                    <?php
+                                    if (isset($_POST['orientation']) && ($_POST['orientation'] != ""))
+                                        $filter = "Orientation: " . $_POST['orientation'];
+                                    else if (isset($_POST['size']) && ($_POST['size'] != ""))
+                                        $filter = "Size: " . $_POST['size'];
+                                    else if (isset($_POST['license']) && ($_POST['license'] != ""))
+                                        $filter = "License: " . $_POST['license'];
+                                    else if (isset($_POST['price_range']) && ($_POST['price_range'] != ""))
+                                        $filter = "Price Range: " . $_POST['price_range'];
+                                    if (isset($filter) && $filter != "")
+                                        echo "<h4>Filtering search by " . $filter . "</h4>";
+                                    ?>
+                                </div>
                                 <br />
                             </div><!-- /filter box -->
-                            
+
                             <?php
                             $search_string = $_GET['search_string'];
-                            
+
                             // Connect to the database
                             $dbLink = new mysqli('sfsuswe.com', 'earaujo', 'swes2016db', 'student_earaujo');
                             if (mysqli_connect_errno()) {
@@ -239,7 +240,7 @@
                                                                 </form>
                                                                 <h2>$$$</h2>
                                                                 <p>{$row['imageTitle']}</p>
-                                                                <a onclick='purchaseAlert()' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>BUY</a>
+                                                                <a onclick='buyAlert()' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>BUY</a>
                                                             </div>
                                                         </div>
                                                         <div class='choose'>
@@ -320,6 +321,10 @@
             function purchaseAlert() {
                 alert("Thank you for purchasing.");
             }
+            function buyAlert() {
+                alert("Please contact us via the Contact link above to put in an order for this item.");
+            }
         </script>
+
     </body>
 </html>

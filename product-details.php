@@ -63,17 +63,18 @@
                         <div class="col-sm-8">
                             <div class="shop-menu pull-right">
                                 <ul class="nav navbar-nav">
-                                <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
-                                                <ul role="menu" class="sub-menu">
-                                                    <li><a href="AdminPage.html">Admin</a></li>
-                                                </ul>
-                                            </li>
-                                <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
-                         
-                                <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                    <li class="dropdown"><a href="index.html"><i class="fa fa-user"></i>Account<i class="fa fa-angle-down"></i></a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li><a href="AdminPage.html">Admin</a></li>
+                                            <li><a href="ArtistPortfolio.html">Artist</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./contact-us.html"><i class="fa fa-envelope"></i>Mail</a></li>
+
+                                    <li><a href="./login.html"><i class="fa fa-lock"></i> Login</a></li>
                                     <!--<li><a href="./login.html"><i class="fa fa-sign-out"></i> LogOut</a></li>-->
 
-                            </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -265,9 +266,9 @@
                             <div class="row">
                                 <span>
                                     <span>US $59</span> 
-                                    <button type="button" class="btn btn-fefault cart">
+                                    <button type="button" class="btn btn-fefault cart" onclick='buyAlert()'>
                                         <i class="fa fa-shopping-cart"></i>
-                                        Add to cart
+                                        Buy
                                     </button>
                                 </span>                                
                             </div>
@@ -320,7 +321,7 @@
                                                     <img src="images/home/gallery1.jpg" alt="" />
                                                     <h2>$56</h2>
                                                     <p>Easy Polo Black Edition</p>
-                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Buy</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -374,5 +375,13 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.prettyPhoto.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            function purchaseAlert() {
+                alert("Thank you for purchasing.");
+            }
+            function buyAlert() {
+                alert("Please contact us via the Contact link above to put in an order for this item.");
+            }
+        </script>
     </body>
 </html>
