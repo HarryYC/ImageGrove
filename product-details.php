@@ -8,140 +8,31 @@
    <body>
       <?php include './includes/header.php';?>
       <section>
-         <div class="container">
+ <div class="container">
             <div class="row">
-               <div class="col-sm-3">
-                  <div class="left-sidebar">
-                     <h2>Category</h2>
-                     <div class="panel-group category-products" id="accordian">
-                        <!--category-productsr-->
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title">
-                                 <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                 <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                 Animals
-                                 </a>
-                              </h4>
-                           </div>
-                           <div id="sportswear" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                 <ul>
-                                    <li><a href="#">Dogs </a></li>
-                                    <li><a href="#">Cats </a></li>
-                                    <li><a href="#">Hedgehogs </a></li>
-                                    <li><a href="#">Cows</a></li>
-                                    <li><a href="#">Koala </a></li>
-                                 </ul>
-                              </div>
-                           </div>
+<!--        <section id="search-box" >
+                    <!-- search-box
+                    <div class="container">
+                        <div id="searchbar">
+                            <form id="search-form" action="./shop.php" method="GET" enctype="multipart/form-data">
+                                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                                    <div class="input-group input-group-lg">
+                                        <input id="searchbox" class="form-control" type="text" name="search_string" placeholder="Search for Another Image">
+                                        <span class="input-group-btn">
+                                            <button id="search-button" type="submit" class="btn btn-default">
+                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title">
-                                 <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                 <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                 Outdoors
-                                 </a>
-                              </h4>
-                           </div>
-                           <div id="mens" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                 <ul>
-                                    <li><a href="#">Landscape</a></li>
-                                    <li><a href="#">Sky</a></li>
-                                    <li><a href="#">Clouds</a></li>
-                                    <li><a href="#">Trees</a></li>
-                                    <li><a href="#">Sea</a></li>
-                                    <li><a href="#">Sunset</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title">
-                                 <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                 <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                 Most Popular
-                                 </a>
-                              </h4>
-                           </div>
-                           <div id="womens" class="panel-collapse collapse">
-                              <div class="panel-body">
-                                 <ul>
-                                    <li><a href="#">Red</a></li>
-                                    <li><a href="#">White</a></li>
-                                    <li><a href="#">Blue</a></li>
-                                    <li><a href="#">Flowers</a></li>
-                                    <li><a href="#">Night</a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Art</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Snow</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Sun</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Portrait</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Green</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Light</a></h4>
-                           </div>
-                        </div>
-                        <div class="panel panel-default">
-                           <div class="panel-heading">
-                              <h4 class="panel-title"><a href="#">Park</a></h4>
-                           </div>
-                        </div>
-                     </div>
-                     <!--/category-productsr-->
-                     <div class="brands_products">
-                        <!--brands_products-->
-                        <h2>Artists </h2>
-                        <div class="brands-name">
-                           <ul class="nav nav-pills nav-stacked">
-                              <li><a href="artist.php"> <span class="pull-right">(50)</span>Sam </a></li>
-                              <li><a href="artist.php"> <span class="pull-right">(56)</span>Eddie </a></li>
-                              <li><a href="artist.php"> <span class="pull-right">(27)</span>Meg </a></li>
-                              <li><a href="artist.php"> <span class="pull-right">(32)</span>Harry</a></li>
-                              <li><a href="artist.php"> <span class="pull-right">(5)</span>Marisa</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                     <!--/brands_products-->
-                     <div class="price-range">
-                        <!--price-range-->
-                        <h2>Price Range</h2>
-                        <div class="well">
-                           <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                           <b>$ 0</b> <b class="pull-right">$ 600</b>
-                        </div>
-                     </div>
-                     <!--/price-range-->
-                  </div>
-               </div>
-               <div class="col-sm-9">
+                    </div>
+                </section>
+                /searchbox
+                <br><br>-->
+               <h2 class="title text-center">Details for: "<?php echo $_GET['image_title']; ?>"</h2>
+               <div class="col-sm-8 col-sm-offset-3">
                   <div class="product-details">
                      <!--product-details-->
                      <div class="col-sm-7">
