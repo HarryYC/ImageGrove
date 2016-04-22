@@ -87,10 +87,10 @@
                         <div class="panel-body">
                            <ul>
                               <li><a href="./shop.php?search_string=dog">Dogs </a></li>
-                              <li><a href="#">Cats </a></li>
-                              <li><a href="#">Hedgehogs </a></li>
-                              <li><a href="#">Cows</a></li>
-                              <li><a href="#">Koala </a></li>
+                              <li><a href="./shop.php?search_string=cat">Cats </a></li>
+                              <li><a href="./shop.php?search_string=hedgehog">Hedgehogs </a></li>
+                              <li><a href="./shop.php?search_string=cow">Cows</a></li>
+                              <li><a href="./shop.php?search_string=koala">Koala </a></li>
                            </ul>
                         </div>
                      </div>
@@ -107,12 +107,12 @@
                      <div id="mens" class="panel-collapse collapse">
                         <div class="panel-body">
                            <ul>
-                              <li><a href="#">Landscape</a></li>
-                              <li><a href="#">Sky</a></li>
-                              <li><a href="#">Clouds</a></li>
-                              <li><a href="#">Trees</a></li>
-                              <li><a href="#">Sea</a></li>
-                              <li><a href="#">Sunset</a></li>
+                              <li><a href="./shop.php?search_string=landscape">Landscape</a></li>
+                              <li><a href="./shop.php?search_string=sky">Sky</a></li>
+                              <li><a href="./shop.php?search_string=cloud">Clouds</a></li>
+                              <li><a href="./shop.php?search_string=tree">Trees</a></li>
+                              <li><a href="./shop.php?search_string=sea">Sea</a></li>
+                              <li><a href="./shop.php?search_string=sunset">Sunset</a></li>
                            </ul>
                         </div>
                      </div>
@@ -124,32 +124,32 @@
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Snow</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=snow">Snow</a></h4>
                      </div>
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Sun</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=sun">Sun</a></h4>
                      </div>
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Portrait</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=portrait">Portrait</a></h4>
                      </div>
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Green</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=green">Green</a></h4>
                      </div>
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Light</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=light">Light</a></h4>
                      </div>
                   </div>
                   <div class="panel panel-default">
                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Park</a></h4>
+                        <h4 class="panel-title"><a href="./shop.php?search_string=park">Park</a></h4>
                      </div>
                   </div>
                </div>
