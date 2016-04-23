@@ -51,15 +51,82 @@
                     <div class="col-sm-12 padding-right">
                         <div class="features_items">
                             <!-- Search Results Title -->
-                            <h2 class="title text-center"><?php
-                                echo $result->num_rows;
-                                if ($result->num_rows == 1) {
-                                    echo " Result ";
-                                } else {
-                                    echo " Results ";
-                                } echo "for \"" . $_GET['search_string'] . "\"";
-                                ?></h2>
-
+                            <h2 class="title text-center"><?php echo $result->num_rows; if ($result->num_rows == 1) { echo " Result "; } else { echo " Results "; } echo "for \"" . $_GET['search_string'] . "\""; ?></h2>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <!-- Filter Box -->
+                                <div class="row">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordian" href="#mens">
+                                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                                    Filter this Search
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="mens" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <form name="myform" action="./shop.php?search_string=<?php echo $_GET['search_string']; ?>" method="POST">
+                                                    <div class="col-sm-6">
+                                                        Orientation: 
+                                                        <select name="orientation" onchange="this.form.submit()">
+                                                            <option disabled selected value> -- select an option -- </option>
+                                                            <option value="landscape">Landscape</option>
+                                                            <option value="portrait">Portrait</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        Licenses Available: 
+                                                        <select name="license" onchange="this.form.submit()">
+                                                            <option disabled selected value> -- select an option -- </option>
+                                                            <option value="web">Web</option>
+                                                            <option value="print">Print</option>
+                                                            <option value="unlimited">Unlimited</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        Size: 
+                                                        <select name="size" onchange="this.form.submit()">
+                                                            <option disabled selected value> -- select an option -- </option>
+                                                            <option value="small">Small</option>
+                                                            <option value="medium">Medium</option>
+                                                            <option value="large">Large</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        Price Range: 
+                                                        <select name="price_range" onchange="this.form.submit()">
+                                                            <option disabled selected value> -- select an option -- </option>
+                                                            <option value="0">$0-$50</option>
+                                                            <option value="1">$50-$100</option>
+                                                            <option value="2">$100-$150</option>
+                                                            <option value="3">$150-$200</option>
+                                                            <option value="4">$200+</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--/filter box -->
+                                <br />
+                                <div class="text-center">
+                                    <?php
+                                    if (isset($_POST['orientation']) && ($_POST['orientation'] != ""))
+                                        $filter = "Orientation: " . $_POST['orientation'];
+                                    else if (isset($_POST['size']) && ($_POST['size'] != ""))
+                                        $filter = "Size: " . $_POST['size'];
+                                    else if (isset($_POST['license']) && ($_POST['license'] != ""))
+                                        $filter = "License: " . $_POST['license'];
+                                    else if (isset($_POST['price_range']) && ($_POST['price_range'] != ""))
+                                        $filter = "Price Range: " . $_POST['price_range'];
+                                    if (isset($filter) && $filter != "")
+                                        echo "<h4>Filtering search by " . $filter . "</h4>";
+                                    ?>
+                                </div>
+                                <br />
+                            </div>
+                            <!-- /filter box -->
                             <?php
                             // Check if db query was successfull
                             if ($result) {
@@ -81,7 +148,7 @@
                                                             </form>
                                                             <h2>$$$</h2>
                                                             <p>{$row['imageTitle']}</p>
-                                                            <a class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i><button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>BUY</button></a>
+                                                            <a onclick='buyAlert()' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>BUY</a>
                                                         </div>
                                                     </div>
                                                     <div class='choose'>
@@ -103,33 +170,19 @@
                             // Close the mysql connection
                             $dbLink->close();
                             ?>
+                            <!--                            <ul class="pagination">
+                               <li class="active"><a href="">1</a></li>
+                               <li><a href="">2</a></li>
+                               <li><a href="">3</a></li>
+                               <li><a href="">&raquo;</a></li>
+                               </ul>-->
                         </div>
                         <!--features_items-->
                         <br />
+                        <!--                    <p>Click <a href="./index.html">here</a> to go back</p>-->
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Thank you for your interest in this image!</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h5>To complete your purchase please call us at (###) ###-####.</h5>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </section>
         <footer id="footer">
             <!--Footer-->
@@ -166,5 +219,13 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.prettyPhoto.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            function purchaseAlert() {
+                alert("Thank you for purchasing.");
+            }
+            function buyAlert() {
+                alert("Please contact us via the Contact link above to put in an order for this item.");
+            }
+        </script>
     </body>
 </html>
