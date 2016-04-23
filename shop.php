@@ -5,6 +5,7 @@
         <title>Search Results</title>
     </head>
     <!--/head-->
+    <!-- sam made a comment -->
     <body>
         <?php include './includes/header.php'; ?>
         <section>
