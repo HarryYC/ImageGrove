@@ -14,7 +14,7 @@
                <form id="search-form" action="./shop.php" method="GET" enctype="multipart/form-data">
                   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-2">
                      <div class="input-group input-group-lg">
-                        <input id="searchbox" class="form-control" type="text" placeholder="Search Image" name="search_string">
+                        <input id="searchbox" class="form-control" type="text" placeholder="Search for Images" name="search_string">
                         <span class="input-group-btn">
                         <button id="search-button" type="submit" class="btn btn-default">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -169,15 +169,6 @@
                </div>
             </div>
          </div>
-         <!--                    <div class="col-sm-3">
-            <div class="price-range">
-                <h2>Price Range</h2>
-                <div class="well">
-                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                    <b>$ 0</b> <b class="pull-right">$ 600</b>
-                </div>
-            </div>
-            </div>-->
       </section>
       <footer id="footer">
          <!--Footer-->
