@@ -15,13 +15,13 @@
                                     <input type="button" name="search_button" id="search_button">
                                 </form>
                             </li>
-                            <li id="options">
+<!--                            <li id="options">
                                 <a href="#">All Images</a>
                                 <ul class="subnav">
                                     <li><a href="#">Images</a></li>
                                     <li><a href="#">Video</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
