@@ -10,8 +10,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       $page_title = "Search Results";
       include("./includes/head.php");
     ?>
+    
     <body>
-  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+    <?php  $home_page = "false"; include("./includes/header.php"); ?>
          <div class="stock_box">
             <div class="col-md-2 stock_left">
                 <div class="w_sidebar">
