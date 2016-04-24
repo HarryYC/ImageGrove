@@ -6,12 +6,11 @@
     ?>
     <body>
         <?php $home_page = "false";
-        include("./includes/header.php"); ?>
+        include("./includes/header.php");
+        ?>
         <div class="register">
             <div class="container">
-                <div class="col-md-9 col_3">
-                    <h2>SUPPORT</h2>
-                </div>
+                <h2>SUPPORT</h2>
                 <div class="map">
                     <iframe width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=SFSU&amp;aq=4&amp;oq=light&amp;sll=37.7219012,-122.4803981&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=SFSU&amp;t=m&amp;z=14&amp;ll=37.7219012,-122.4803981&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=SFSU&amp;aq=4&amp;oq=light&amp;sll=37.7219012,-122.4803981&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=SFSU&amp;t=m&amp;z=14&amp;ll=37.7219012,-122.4803981" style="color:#666;text-align:left;font-size:12px">View Larger Map</a></small>
                 </div>
@@ -24,9 +23,11 @@
                                             this.value = 'Name...';
                                         }">
                                 <input type="text" class="text" value="Email..." onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Email...';}" style="margin-left: 10px">
+                                            this.value = 'Email...';
+                                        }" style="margin-left: 10px">
                                 <input type="text" class="text" value="Subject..." onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Subject...';}" style="margin-left: 10px">
+                                            this.value = 'Subject...';
+                                        }" style="margin-left: 10px">
                             </div>
                             <div class="text2">
                                 <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {
@@ -53,57 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid_2">
-            <div class="container"> 
-                <div class="col-md-3 col_2">
-                    <h3>Stock Photo<br>Categories</h3>
-                </div>
-                <div class="col-md-9 col_5">
-                    <div class="col_1_of_5 span_1_of_5">
-                        <ul class="list1">
-                            <li><a href="./stock.php?search_string=Abstract">Abstract</a></li>
-                            <li><a href="./stock.php?search_string=Animals">Animals</a></li>
-                            <li><a href="./stock.php?search_string=Arts">The Arts</a></li>
-                            <li><a href="./stock.php?search_string=Textures">Textures</a></li>
-                            <li><a href="./stock.php?search_string=Fashion">Fashion</a></li>
-                            <li><a href="./stock.php?search_string=Landmarks">Landmarks</a></li>
-                        </ul>
-                    </div>
-                    <div class="col_1_of_5 span_1_of_5">
-                        <ul class="list1">
-                            <li><a href="./stock.php?search_string=Business">Business</a></li>
-                            <li><a href="./stock.php?search_string=Celebrities">Celebrities</a></li>
-                            <li><a href="./stock.php?search_string=Editorial">Editorial</a></li>
-                            <li><a href="./stock.php?search_string=Education">Education</a></li>
-                            <li><a href="./stock.php?search_string=Food">Food</a></li>
-                            <li><a href="./stock.php?search_string=Healthcare">Healthcare</a></li>
-                        </ul>
-                    </div>
-                    <div class="col_1_of_5 span_1_of_5">
-                        <ul class="list1">
-                            <li><a href="./stock.php?search_string=Holidays">Holidays</a></li>
-                            <li><a href="./stock.php?search_string=Illustrations">Illustrations</a></li>
-                            <li><a href="./stock.php?search_string=Industrial">Industrial</a></li>
-                            <li><a href="./stock.php?search_string=Interiors">Interiors</a></li>
-                            <li><a href="./stock.php?search_string=Miscellaneous">Miscellaneous</a></li>
-                            <li><a href="./stock.php?search_string=Model">Model</a></li>
-                        </ul>
-                    </div>
-                    <div class="col_1_of_5 span_1_of_5">
-                        <ul class="list1">
-                            <li><a href="./stock.php?search_string=Nature">Nature</a></li>
-                            <li><a href="./stock.php?search_string=Objects">Objects</a></li>
-                            <li><a href="./stock.php?search_string=Parks">Parks</a></li>
-                            <li><a href="./stock.php?search_string=People">People</a></li>
-                            <li><a href="./stock.php?search_string=Religion">Religion</a></li>
-                            <li><a href="./stock.php?search_string=Science">Science</a></li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
+
 <?php include("./includes/footer.php"); ?>
     </body>
 </html>		

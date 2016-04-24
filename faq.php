@@ -6,106 +6,23 @@
   ?>
 <body>
   <?php  $home_page = "false"; include("./includes/header.php"); ?>
-      <div class="container"> 
-  	     <div class="logo">
-			<h1><a href="index.html">Photo Hub</a></h1>
-		 </div>
-		 <div class="top_right">
-		   <ul>
-			<li><a href="register.html">Register</a></li>|
-			<li class="login" >
-				 <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-					  <div id="loginBox">                
-						  <form id="loginForm">
-			                <fieldset id="body">
-			                	<fieldset>
-			                          <label for="email">Email Address</label>
-			                          <input type="text" name="email" id="email">
-			                    </fieldset>
-			                    <fieldset>
-			                            <label for="password">Password</label>
-			                            <input type="password" name="password" id="password">
-			                     </fieldset>
-			                    <input type="submit" id="login" value="Sign in">
-			                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-			            	</fieldset>
-			                 <span><a href="#">Forgot your password?</a></span>
-						   </form>
-				        </div>
-			      </div>
-			  </li>
-		   </ul>
-	     </div>
-		 <div class="clearfix"></div>
-		</div>
-	</div>
+  
 	<div class="register">
 	  <div class="container">
 	  	  <h2>Frequently Asked Questions</h2>
-	  	  <h3>There are many variations of passages ? </h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
-	  	  <h3>Lorem Ipsum is simply dummy text of the printing ?</h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
-	  	  <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium ?</h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
-	  	  <h3>But I must explain to you how all this mistaken idea of denouncing ?</h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
-	  	  <h3>On the other hand, we denounce with righteous ?</h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
-	  	  <h3>It is a long established ?</h3>
-	  	  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks</p>
+	  	  <h3>What is Image Grove?</h3>
+	  	  <p>We are a media hosting solution created to handle the issues CII has regarding the licensing and sale of artist’s images.</p>
+	  	  <h3>Where does Image Grove get it's media?</h3>
+	  	  <p>Image Grove offers images and videos from artists from all over the world. Artists sign up for an account with Image Grove and upload their work specifying the type of license(s) their individual art piece can have and be sold with.</p>
+	  	  <h3>What types of licenses does Image Grove offer?</h3>
+                  <p>Image Grove provides three different types of licenses. One for Web distribution, one for a physical Print distribution, and one for both Web and Print. For more information on pricing and licensing please refer to our <a href="price.php">Pricing Plans</a> page.</p>
+	  	  <h3>How do I sell my art work with Image Grove?</h3>
+	  	  <p>You can register for an Artist account with Image Grove and upload your work to our store to be sold. With an artist account you'll be able to upload or take down your media as often whenever and as often as you'd like. Please note that by registering for an artist account you agree to comply with our Terms of Use and will only upload images or videos that fall within our guidelines for approved media.</p>
+	  	  <h3>Do I need to register for an account in order to purchase?</h3>
+	  	  <p>No, you are welcome to purchase as a guest without the need of registering for an account.</p>
+	  	  <h3>What form of payment can I use?</h3>
+	  	  <p>We accept Visa, MasterCard, American Express and Discover credit cards as well as Bitcoin.</p>
 	  </div>
-	</div>
-	<div class="grid_2">
-		<div class="container"> 
-			<div class="col-md-3 col_2">
-				<h3>Stock Photo<br>Categories</h3>
-			</div>
-			<div class="col-md-9 col_5">
-				<div class="col_1_of_5 span_1_of_5">
-					<ul class="list1">
-					    <li><a href="stock.html">Abstract</a></li>
-			            <li><a href="stock.html">Animals/Wildlife</a></li>
-			            <li><a href="stock.html">The Arts</a></li>
-			            <li><a href="stock.html">Backgrounds/Textures</a></li>
-			            <li><a href="stock.html">Beauty/Fashion</a></li>
-			            <li><a href="stock.html">Buildings/Landmarks</a></li>
-		            </ul>
-				</div>
-				<div class="col_1_of_5 span_1_of_5">
-					<ul class="list1">
-					    <li><a href="stock.html">Business/Finance</a></li>
-			            <li><a href="stock.html">Celebrities</a></li>
-			            <li><a href="stock.html">Editorial</a></li>
-			            <li><a href="stock.html">Education</a></li>
-			            <li><a href="stock.html">Food and Drink</a></li>
-			            <li><a href="stock.html">Healthcare/Medical</a></li>
-		            </ul>
-				</div>
-				<div class="col_1_of_5 span_1_of_5">
-					<ul class="list1">
-					    <li><a href="stock.html">Holidays</a></li>
-			            <li><a href="stock.html">Illustrations/Clip-Art</a></li>
-			            <li><a href="stock.html">Industrial</a></li>
-			            <li><a href="stock.html">Interiors</a></li>
-			            <li><a href="stock.html">Miscellaneous</a></li>
-			            <li><a href="stock.html">Model Released Only</a></li>
-		            </ul>
-				</div>
-				<div class="col_1_of_5 span_1_of_5">
-					<ul class="list1">
-					    <li><a href="stock.html">Nature</a></li>
-			            <li><a href="stock.html">Objects</a></li>
-			            <li><a href="stock.html">Parks/Outdoor</a></li>
-			            <li><a href="stock.html">People</a></li>
-			            <li><a href="stock.html">Religion</a></li>
-			            <li><a href="stock.html">Science</a></li>
-		            </ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
 	</div>
       <?php include("./includes/footer.php");?>
 </body>
