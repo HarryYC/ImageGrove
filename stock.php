@@ -6,9 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-    <?php 
-      $page_title = "Search Results";
-      include("./includes/head.php");
+    <?php
+    $page_title = "Search Results";
+    include("./includes/head.php");
     ?>
     
     <body>
@@ -167,6 +167,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="clearfix"> </div>
             </div>
         </div>
-      <?php include("./includes/footer.php");?>
+<?php include("./includes/footer.php"); ?>
     </body>
 </html>		
