@@ -1,4 +1,4 @@
-<div class="grid_2" style="padding-top: 160px;">
+<div class="grid_2" style="padding-top: 60px;">
     <div class="container"> 
         <div class="col-md-3 col_2">
             <h3>Stock Photo<br>Categories</h3>
