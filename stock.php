@@ -7,62 +7,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
     <?php 
-    $page_title = "Search Results";
-    include("./includes/head.php");
+      $page_title = "Search Results";
+      include("./includes/head.php");
     ?>
     <body>
-        <div class="header">	
-            <div class="container"> 
-                <div class="logo">
-                    <h1><a href="index.html">Image Grove</a></h1>
-                </div>
-                <div class="search">
-                        <ul class="nav1">
-                            <li id="search">
-                                <form action="./stock.php" method="get">
-                                    <input type="text" name="search_string" id="search_text" placeholder="Search"/>
-                                    <input type="button" name="search_button" id="search_button">
-                                </form>
-                            </li>
-                            <li id="options">
-                                <a href="#">All Images</a>
-                                <ul class="subnav">
-                                    <li><a href="#">Images</a></li>
-                                    <li><a href="#">Video</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                <div class="top_right">
-                    <ul>
-                        <li><a href="register.html">Register</a></li>|
-                        <li class="login" >
-                            <div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
-                                <div id="loginBox">                
-                                    <form id="loginForm">
-                                        <fieldset id="body">
-                                            <fieldset>
-                                                <label for="email">Email Address</label>
-                                                <input type="text" name="email" id="email">
-                                            </fieldset>
-                                            <fieldset>
-                                                <label for="password">Password</label>
-                                                <input type="password" name="password" id="password">
-                                            </fieldset>
-                                            <input type="submit" id="login" value="Sign in">
-                                            <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-                                        </fieldset>
-                                        <span><a href="#">Forgot your password?</a></span>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="stock_box">
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+         <div class="stock_box">
             <div class="col-md-2 stock_left">
                 <div class="w_sidebar">
                     <section class="sky-form">

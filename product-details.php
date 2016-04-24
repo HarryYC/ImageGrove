@@ -6,8 +6,8 @@
    </head>
    <!--/head-->
    <body>
-      <?php include './includes/header.php';?>
-      <section>
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+       <section>
  <div class="container">
             <div class="row">
 <!--        <section id="search-box" >

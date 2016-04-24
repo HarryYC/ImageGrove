@@ -5,8 +5,8 @@
       include("./includes/head.php");
   ?>
 <body>
-  <?php include("./includes/header.php"); ?>
-	<div class="price">
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+ 	<div class="price">
 		<div class="container">
    	   	 	<h2>Pricing Plans</h2>
    	   		<div class="col-md-4 span4">

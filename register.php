@@ -5,8 +5,8 @@
       include("./includes/head.php");
   ?>
 <body>
-  <?php include("./includes/header.php"); ?>
-	<div class="register">
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+ 	<div class="register">
 		<div class="container">
 		   <form> 
 				 <div class="register-top-grid">

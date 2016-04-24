@@ -6,7 +6,7 @@
    ?>
 
 <body>
-  <?php include("./includes/header.php"); ?>
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
 	<div class="register">
 	  <div class="container">
 	  	<div class="about_box">

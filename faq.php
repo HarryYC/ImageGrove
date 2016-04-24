@@ -5,7 +5,7 @@
       include("./includes/head.php");
   ?>
 <body>
-  <?php include("./includes/header.php"); ?>
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
       <div class="container"> 
   	     <div class="logo">
 			<h1><a href="index.html">Photo Hub</a></h1>

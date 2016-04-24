@@ -3,6 +3,7 @@
       <div class="logo">
          <h1><a href="index.php">Image Grove</a></h1>
       </div>
+      <?php if($home_page != "true") : ?>
       <div class="search">
          <ul class="nav1">
             <li id="search">
@@ -20,6 +21,7 @@
             </li>
          </ul>
       </div>
+      <?php endif; ?>
       <div class="top_right">
          <ul>
             <li><a href="register.php">Register</a></li>

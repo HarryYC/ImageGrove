@@ -5,8 +5,8 @@
       include("./includes/head.php");
   ?>
     <body>
-       <?php include("./includes/header.php"); ?>
-        <div class="single">
+  <?php  $home_page = "false"; include("./includes/header.php"); ?>
+         <div class="single">
             <div class="container">
                 <div class="single_box1">
                     <div class="col-sm-5 single_left">

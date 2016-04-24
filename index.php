@@ -6,12 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-  <?php 
-      $page_title = "Home";
-      include("./includes/head.php");
-  ?>
+    <?php $page_title = "Home"; include("./includes/head.php"); ?>
     <body>
-    <?php include("./includes/header.php"); ?>
+    <?php  $home_page = "true"; include("./includes/header.php"); ?>
         <div class="banner">
             <div class="container">
                 <div class="span_1_of_1">
