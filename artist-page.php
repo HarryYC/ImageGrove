@@ -10,9 +10,11 @@
         <link href="css/portfolio-css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="css/portfolio-css/portfolio-item.css" rel="stylesheet">
-
-        <?php include './includes/head.php'; ?>
-        <title>Product Details</title>
+        
+        <?php
+            $page_title = "Artist";
+            include("./includes/head.php");
+        ?> 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
