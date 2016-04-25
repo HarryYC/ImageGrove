@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-        <!-- head includes -->
-        <?php
-            $page_title = "Artist";
-            include("./includes/head.php");
-        ?> 
+    <!-- head includes -->
+    <?php
+    $page_title = "Artist";
+    include("./includes/head.php");
+    include("../app/views/artistProfile/bigPictureView.php");
+    ?> 
 
     <body>
         <!-- includes header bar with logo, search, register/login etc...-->
@@ -32,7 +33,9 @@
             <div class="row">
 
                 <div class="col-md-8">
-                    <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                    <?php
+                    echo getArtistData();
+                    ?>
                 </div>
 
                 <div class="col-md-4">
