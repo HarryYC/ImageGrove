@@ -1,0 +1,29 @@
+/*!
+ * Start Bootstrap - Portfolio Item HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+   
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.imageControlsAndShare>.fa:hover,
+.imageControlsAndShare > .fa:hover{
+    color: green!important;
+    transition: color .2s ease-in
+}
+
+.imageControlsAndShare>.fa-heart:hover,
+.imageControlsAndShare > .fa-heart:hover{
+    color: red!important;
+    transition: color .2s ease-in
+}
