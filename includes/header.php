@@ -27,7 +27,7 @@
             <li><a href="index.php">Home</a></li>|
             <li><a href="#">My Account</a></li>|
             <!--<li><a href="register.php">Contact</a></li>|-->
-            <li><a href="support.php">Contact</a></li>|
+            <li><a href="support.php">Support</a></li>|
             <li><a href="register.php">Register</a></li>|
             <li class="login" >
                <div id="loginContainer">

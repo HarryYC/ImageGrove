@@ -1,56 +1,53 @@
 <!DOCTYPE HTML>
 <html>
-  <?php 
-      $page_title = "Home";
-      include("./includes/head.php");
-  ?>
-<body>
-  <?php  $home_page = "false"; include("./includes/header.php"); ?>
- 	<div class="register">
-		<div class="container">
-		   <form> 
-				 <div class="register-top-grid">
-					<h1>PERSONAL INFORMATION</h1>
-					 <div>
-						<span>First Name<label>*</label></span>
-						<input type="text"> 
-					 </div>
-					 <div>
-						<span>Last Name<label>*</label></span>
-						<input type="text"> 
-					 </div>
-					 <div>
-						 <span>Email Address<label>*</label></span>
-						 <input type="text"> 
-					 </div>
-					 <div class="clearfix"> </div>
-					   <a class="news-letter" href="#">
-						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-					   </a>
-					 </div>
-				     <div class="register-bottom-grid">
-						    <h4>LOGIN INFORMATION</h4>
-							 <div>
-								<span>Password<label>*</label></span>
-								<input type="text">
-							 </div>
-							 <div>
-								<span>Confirm Password<label>*</label></span>
-								<input type="text">
-							 </div>
-							 <div class="clearfix"> </div>
-					 </div>
-				</form>
-				<div class="clearfix"> </div>
-				<div class="register-but">
-				   <form>
-					   <input type="submit" value="submit">
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
-		   </div>
-	</div>
-	
-  <?php include("./includes/footer.php");?>
-</body>
+    <?php
+    $page_title = "Home";
+    include("./includes/head.php");
+    ?>
+    <body>
+        <?php
+        $home_page = "false";
+        include("./includes/header.php");
+        ?>
+        <div class="register" style="padding-bottom: 160px">
+            <div class="container">
+                <section id="form"><!--form-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-offset-1">
+                                <div class="login-form"><!--login form-->
+                                    <h2>Login to your account</h2>
+                                    <form action="#">
+                                        <input type="text" placeholder="Name" />
+                                        <input type="email" placeholder="Email Address" />
+                                        <span>
+                                            <input type="checkbox" class="checkbox"> 
+                                            Keep me signed in
+                                        </span>
+                                        <button type="submit" class="btn btn-default">Login</button>
+                                    </form>
+                                </div><!--/login form-->
+                            </div>
+                            <div class="col-sm-1">
+                                <h2 class="reg_or" style="color: white;">OR</h2>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="signup-form"><!--sign up form-->
+                                    <h2>New User Sign up!</h2>
+                                    <form action="#">
+                                        <input  style="color: black;" type="text" placeholder="Name"/>
+                                        <input type="email" placeholder="Email Address"/>
+                                        <input type="password" placeholder="Password"/>
+                                        <button type="submit" class="btn btn-default">Sign up</button>
+                                    </form>
+                                </div><!--/sign up form-->
+                            </div>
+                        </div>
+                    </div>
+                </section><!--/form-->
+            </div>
+        </div>
+
+        <?php include("./includes/footer.php"); ?>
+    </body>
 </html>		
