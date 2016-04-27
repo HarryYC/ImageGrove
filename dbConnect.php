@@ -1,25 +1,18 @@
-
-
 <?php
-function dbConnect(){
-// Create connection
-$servername = "sfsuswe.com";
-$username = "s16g07";
-$password = "team7db";
-$dbname = "student_s16g07";
-$conn = new mysqli($servername, $username, $password,$dbname);
-       if(!$conn){
-           die('Could not connect: ' . mysql_error());
-       }
-echo 'Connected successfully';
-
-
-return $conn;
-
+function dbConnect() {
+    static $conn;
+    if (!isset($conn)) {
+        $config = parse_ini_file('C:\xampp\htdocs\PhpProject1\config\config.ini');
+        $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+        if (!$conn) {
+            die('Could not connect: ' . mysql_error());
+        }
+    }
+    //echo 'Connected successfully';
+    return $conn;
 }
-function dbConClose($conn){
+function dbConClose($conn) {
     $conn->close();
 }
 
-dbConnect();
 ?>
