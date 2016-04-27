@@ -9,10 +9,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <?php
     $page_title = "Search Results";
     include("./includes/head.php");
+    include("./ProductInfoClass.php");
+
+    $productInfo = new ProductInfo();
+    $searchResults = $productInfo->getAllProductsByKeyword($_GET['search_string']);
+    $numOfResults = count($searchResults);
     ?>
     <body>
-        <?php $home_page = "false";
-        include("./includes/header.php"); ?>
+        <?php
+        $home_page = "false";
+        include("./includes/header.php");
+        ?>
         <div class="stock_box">
             <div class="col-md-2 stock_left">
                 <div class="w_sidebar">
@@ -42,30 +49,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </section>
                 </div>
             </div>
-            <div class="col-md-10 sap_tabs">	
+            <div class="col-md-10 sap_tabs">    
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <?php
-                    $search_string = $_GET['search_string'];
-
-                    // Connect to the database
-//              $dbLink = new mysqli('sfsuswe.com', 's16g07', 'team7db', 'student_s16g07');
-                    $dbLink = new mysqli('sfsuswe.com', 'earaujo', 'swes2016db', 'student_earaujo');
-                    if (mysqli_connect_errno()) {
-                        die("MySQL connection failed: " . mysqli_connect_error());
-                    }
-                    $search_string = mysqli_real_escape_string($dbLink, $search_string);
-
-                    // Query for a list of all existing files
-                    $sql = "SELECT id, description, imageTitle FROM `file` WHERE description LIKE '%{$search_string}%'";
-
-//              $sql = "SELECT Media_id, Description, Title FROM `Media_Metadata` WHERE Description LIKE '%{$search_string}%'";
-                    $result = $dbLink->query($sql);
+//                    $search_string = $_GET['search_string'];
+//
+//                    // Connect to the database
+////              $dbLink = new mysqli('sfsuswe.com', 's16g07', 'team7db', 'student_s16g07');
+//                    $dbLink = new mysqli('sfsuswe.com', 'earaujo', 'swes2016db', 'student_earaujo');
+//                    if (mysqli_connect_errno()) {
+//                        die("MySQL connection failed: " . mysqli_connect_error());
+//                    }
+//                    $search_string = mysqli_real_escape_string($dbLink, $search_string);
+//
+//                    // Query for a list of all existing files
+//                    $sql = "SELECT id, description, imageTitle FROM `file` WHERE description LIKE '%{$search_string}%'";
+//
+////              $sql = "SELECT Media_id, Description, Title FROM `Media_Metadata` WHERE Description LIKE '%{$search_string}%'";
+//                    $result = $dbLink->query($sql);
                     ?>
                     <ul class="resp-tabs-list">
                         <h2 class="resp-tab-item" aria-controls="tab_item-0" role="tab">
                             <?php
-                            echo $result->num_rows;
-                            if ($result->num_rows == 1) {
+                            echo $numOfResults;
+                            if ($numOfResults == 1) {
                                 echo " Result ";
                             } else {
                                 echo " Results ";
@@ -79,44 +86,54 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 <?php
                                 // Check if db query was successfull
-                                if ($result) {
-                                    // Make sure there are some files in there
-                                    if ($result->num_rows == 0) {
-                                        echo '<div class="col-sm-8 col-sm-offset-3"><h3>There are no matches for your search in the database</h3></div>';
-                                    } else {
-                                        // Display each file
-                                        while ($row = $result->fetch_assoc()) {
-                                            //if (strripos($row['description'], $search_string) !== false) {
-                                            echo "
+//                                if ($result) {
+//                                    // Make sure there are some files in there
+//                                    if ($result->num_rows == 0) {
+//                                        echo '<div class="col-sm-8 col-sm-offset-3"><h3>There are no matches for your search in the database</h3></div>';
+//                                    } else {
+//                                        // Display each file
+//                                while ($row = $result->fetch_assoc()) {
+                                //if (strripos($row['description'], $search_string) !== false) {
+                                if ($numOfResults > 0) {
+
+                                    for ($i = 0; $i < count($searchResults); $i++) {
+                                        
+                                        echo "
                                             <li><form id='product_details' action='./single.php' method='GET'>
-                                                <input type='hidden' name='image_title' value='{$row['imageTitle']}'/>
-                                                <button type='submit' style='padding: 0; border: 0;' name='image_id' value='{$row['id']}'><img src='./PHP/get.php?id={$row['id']}&type=thumbnail' class='img-responsive' alt='' style='width:200px;height:150px;'></button>
+                                                <input type='hidden' name='image_title' value='{$searchResults[$i]->getTitle()}'/>
+                                                <button type='submit' style='padding: 0; border: 0;' name='image_id' value='{$searchResults[$i]->getMediaId()}'>"
+                                                . "<img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
+                                                </button>
                                                 <div class='tab_desc'>
-                                                    <p>{$row['imageTitle']}</p>
-                                                    <h4>id#{$row['id']}</h4>
+                                                    <p>{$searchResults[$i]->getTitle()}</p>
+                                                    <h4>id#{$searchResults[$i]->getMediaId()}</h4>
                                                 </div>
                                             </form></li>";
-                                        }
                                     }
-                                    //}
-                                    //Free the result
-                                    $result->free();
                                 } else {
-                                    echo '<br/>Error! SQL query failed:';
-                                    echo "<pre>{$dbLink->error}</pre>";
+                                    echo "<div align='center'><h3>Sorry, no results found, try another search!</h3></div>";
                                 }
+                                //}
+                                //}
+                                //Free the result
+                                //$result->free();
+//                                } else {
+//                                    echo '<br/>Error! SQL query failed:';
+//                                    echo "<pre>{$dbLink->error}</pre>";
+//                                }
                                 // Close the mysql connection
-                                $dbLink->close();
+                                //$dbLink->close();
+                                $productInfo->closeDBConnection();
                                 ?>
                                 <div class="clearfix"></div>
                             </ul>
-                        </div>		        					 	        					 
-                    </div>	
+                        </div>                                                                   
+                    </div>  
                 </div>
             </div>
             <div class="clearfix"> </div>
         </div>
-        
-<?php include("./includes/footer.php"); ?>
+
+        <?php include("./includes/footer.php"); ?>
     </body>
-</html>		
+</html>     
