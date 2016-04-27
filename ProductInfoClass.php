@@ -1,32 +1,28 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class consists of methods to fetch data pertaining to an artist from the database.
+ * 
  */
-
 class ProductInfoClass {
-
+     
+    function ProductInfoClass(){
+     require_once "config/dbConnect.php";
+     
+    }
     function getPriceByLicense($Media_Id, $LicenseType) {
-        require_once "config/dbConnect.php";
-        $conn = dbConnect();
-        $sql = "select Price FROM Media_File WHERE Media_Id=$Media_Id and Licenses=$LicenseType";
+        $conn=  dbConnect();
+        $sql = "select Price FROM Media_Metadata WHERE Media_Id=$Media_Id and Licenses=$LicenseType";
         $price = mysqli_query($conn,$sql);
-       // if ($conn->query($sql) === TRUE) {
-       //     echo "Price fetched successfully";
-       // } else {
-       //     echo "Error fetching file: " . $conn->error;
+        if ($conn->query($sql) === TRUE) {
+      //     echo "Price fetched successfully";
+      //  } else {
+       //    echo "Error fetching file: " . $conn->error;
        // }
         dbConClose($conn);
         return $price;
     }
-
-    //function uploadImage() {
-    //}
-
     function deleteProductByID($productID) {
-        require_once "config/dbConnect.php";
         $conn = dbConnect();
         $sql = "DELETE FROM Media_File WHERE Media_Id=$productID";
         $res=mysqli_query($conn,$sql);
@@ -40,6 +36,7 @@ class ProductInfoClass {
         return $res;
     }
 
+    /*returns a media file  pertaining to the given productID*/
     function getProductById($productID) {
         require_once 'config/dbConnect.php';
         $conn = dbConnect();
@@ -50,11 +47,10 @@ class ProductInfoClass {
          //   echo "Error displaying Product: " . $conn->error;
         //}
        $res=mysqli_query($conn,$sql);
-        
         dbConClose($conn);
         return $res;
     }
-
+ /*returns an array of the Thumbnails in the database*/
     function getThumbNails() {
         require_once 'config/dbConnect.php';
         $conn = dbConnect();
@@ -72,10 +68,10 @@ class ProductInfoClass {
         return $res;
     }
 
-    function getproductInfo() {
-        require_once 'config/dbConnect.php';
+    /* returns array of productInfo pertaining to the given productID*/
+    function getproductInfo($productID,$LicenseType) {
         $conn = dbConnect();
-        $sql = "select * FROM Media_Metadata where ";
+        $sql = "select Price FROM Media_Metadata WHERE Media_Id=$productID and Licenses=$LicenseType";
         $res=mysqli_query($conn,$sql);
       //  $res = mysql_query($sql);
         //if (mysql_num_rows($res) != 0) { //count the number of rowss
@@ -88,5 +84,11 @@ class ProductInfoClass {
     }
 
 }
-
+}
+/*
+ * use this following approach to fetch data .
+$productInfo= new ProductInfoClass; //uncomment to test
+$res=$productInfo->getPriceByLicense('291','print');
+echo $res;
+*/
 ?>
