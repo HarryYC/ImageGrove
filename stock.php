@@ -3,7 +3,7 @@
     <?php
     $page_title = "Search Results";
     include("./includes/head.php");
-    include(".app/controllers/SearchResultsController.php");
+    include("./app/controllers/SearchResultsController.php");
     ?>
     <body>
         <?php
