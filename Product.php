@@ -1,9 +1,10 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Product class allows image data from database table to be saved and easily 
+ * accessed after it is retrieved. Contains get functions for each column of 
+ * data in table. Used when there are multiple rows in the SQL result 
+ * (e.g. search results page).
  */
 
 class Product {
@@ -13,51 +14,66 @@ class Product {
     private $title;
     private $description;
     private $thumbnail;
-    private $price;
+    private $webPrice;
+    private $printPrice;
+    private $unlimitedPrice;
     private $keywords;
-    private $licenses;
     private $blockStatus;
 
-    public function __construct($media_id, $artist_id, $title, $description, $thumbnail, $price, $keywords, $licenses, $blockStatus) {
-        $this->media_id= $media_id;
+    public function __construct($media_id, $artist_id, $title, $description, $thumbnail, $webPrice, $printPrice,
+            $unlimitedPrice, $keywords, $blockStatus) {
+        $this->media_id = $media_id;
         $this->artist_id = $artist_id;
         $this->title = $title;
         $this->description = $description;
         $this->thumbnail = $thumbnail;
-        $this->price = $price;
+        $this->webPrice = $webPrice;
+        $this->printPrice = $printPrice;
+        $this->unlimitedPrice = $unlimitedPrice;
         $this->keywords = $keywords;
-        $this->licenses = $licenses;
         $this->blockStatus = $blockStatus;
     }
-    
-    public function getMediaID(){
+
+    public function getMediaID() {
         return $this->media_id;
     }
-    public function getArtistID(){
+
+    public function getArtistID() {
         return $this->artist_id;
     }
-    public function getTitle(){
+
+    public function getTitle() {
         return $this->title;
     }
-    public function getDesc(){
+
+    public function getDesc() {
         return $this->description;
     }
-    public function getThumbnail(){
+
+    public function getThumbnail() {
         return $this->thumbnail;
     }
-    public function getPrice(){
-        return $this->price;
+
+    public function getWebPrice() {
+        return $this->webPrice;
     }
-    public function getKeywords(){
+    
+    public function getPrintPrice() {
+        return $this->printPrice;
+    }
+    
+    public function getUnlimitedPrice() {
+        return $this->unlimitedPrice;
+    }
+
+    public function getKeywords() {
         return $this->keywords;
     }
-    public function getLicenses(){
-        return $this->licenses;
-    }
-    public function getBlockStatus(){
+
+    public function getBlockStatus() {
         return $this->blockStatus;
     }
-}
 
+}
 
 ?>

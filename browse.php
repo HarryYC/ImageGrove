@@ -1,9 +1,15 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
     <?php
-    $page_title = "Search Results";
+    $page_title = "Browse All";
     include("./includes/head.php");
-    include(".app/controllers/SearchResultsController.php");
+    include("./SearchResultsController.php");
     ?>
     <body>
         <?php
@@ -39,20 +45,14 @@
                     </section>
                 </div>-->
             </div>
-            <div class="col-md-10 sap_tabs">    
+            <div class="col-md-10 sap_tabs">	
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <ul class="resp-tabs-list">
                         <h2 class="resp-tab-item" aria-controls="tab_item-0" role="tab">
                             <?php
-                            $searchResults = SearchResultsController::searchResults($_GET['search_string']);
+                            $searchResults = SearchResultsController::browseAll();
                             $numOfResults = count($searchResults);
-
-                            echo $numOfResults;
-                            if ($numOfResults == 1) {
-                                echo " Result ";
-                            } else {
-                                echo " Results ";
-                            } echo "for \"" . $_GET['search_string'] . "\"";
+                            echo 'Browsing ' . $numOfResults . ' Products';
                             ?></h2>
                         <div class="clearfix"></div>
                     </ul>
@@ -60,7 +60,7 @@
                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
                             <ul class="tab_img">
                                 <?php
-                                if ($numOfResults > 0) {
+                                if (($numOfResults > 0) && ($numOfResults < 16)){
                                     for ($i = 0; $i < count($searchResults); $i++) {
                                         echo "
                                             <li><form id='product_details' action='./single.php' method='GET'>
@@ -71,7 +71,6 @@
                                                 <div class='tab_desc'>
                                                     <p>{$searchResults[$i]->getTitle()}</p>
                                                     <h4>id#{$searchResults[$i]->getMediaId()}</h4>
-                                                    <p>Price: " . SearchResultsController::findLowestPrice($searchResults[$i]) . "
                                                 </div>
                                             </form></li>";
                                     }
@@ -81,8 +80,8 @@
                                 ?>
                                 <div class="clearfix"></div>
                             </ul>
-                        </div>                                                                   
-                    </div>  
+                        </div>		        					 	        					 
+                    </div>	
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -90,4 +89,4 @@
 
         <?php include("./includes/footer.php"); ?>
     </body>
-</html>     
+</html>		
