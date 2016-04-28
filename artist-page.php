@@ -4,7 +4,8 @@
     <?php
     $page_title = "Artist";
     include("./includes/head.php");
-    include("../app/views/artistProfile/bigPictureView.php");
+    include("app/views/artistProfile/bigPictureView.php");
+    include("app/views/artistProfile/imageGridView.php");
     ?> 
 
     <body>
@@ -62,16 +63,9 @@
 
                 <?php
                 //  generate a grid of images
-                for ($i = 0; $i < 3; $i++) {
-                    for ($j = 0; $j < 4; $j++) {
-                        $imgSrc = "http://placehold.it/500x300";
-                        echo "<div class=\"col-sm-3 col-xs-6\"><a href=\"#\">";
-                        echo "<img class=\"img-responsive portfolio-item\" src=" . $imgSrc . " alt=\"\">";
-                        echo "</a></div>";
-                    }
-                    echo "<br>";
-                }
+                echo generateArtistImageGrid();
                 ?>
+                
                 <div class="col-sm-2 imageControlsAndShare" style="white-space: nowrap; width: 2%;">
                     <i data-toggle="tooltip" title="Zoom In" class="fa fa-plus-square fa-3x wow bounceIn"></i><br>
                     <i data-toggle="tooltip" title="Zoom Out" class="fa fa-minus-square fa-3x wow bounceIn"></i><br>
