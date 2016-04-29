@@ -35,6 +35,14 @@ body a{
     -ms-transition: 0.5s all;
     -moz-transition: 0.5s all;
 }
+.navbar {
+    background-color: #3b5889;
+}
+form.navbar-form.navbar-left .form-group input.form-control{
+  background-color: #eee;
+  color: #000000;
+  width: 610px;
+}
 .header{
     background:#3b5889;
     padding:1em 0;
@@ -58,7 +66,7 @@ body a{
 .top_right{
     float:right;
     color: #ffffff;
-    margin-top:5px;
+    margin-top:15px;
 }
 .top_right ul{
     padding:0;
