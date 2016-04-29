@@ -6,6 +6,7 @@
     include("./includes/head.php");
     include("app/views/artistProfile/bigPictureView.php");
     include("app/views/artistProfile/imageGridView.php");
+    include("app/views/artistProfile/uploadModalView.php");
     ?> 
 
     <body>
@@ -40,6 +41,15 @@
                 </div>
 
                 <div class="col-md-4">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Upload Image</button>
+
+                    <?php
+                    //  code to show modal
+                    echo showUploadModal();
+                    ?>
+
+
                     <h3>Project Description</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
                     <h3>Project Details</h3>
@@ -65,7 +75,7 @@
                 //  generate a grid of images
                 echo generateArtistImageGrid();
                 ?>
-                
+
                 <div class="col-sm-2 imageControlsAndShare" style="white-space: nowrap; width: 2%;">
                     <i data-toggle="tooltip" title="Zoom In" class="fa fa-plus-square fa-3x wow bounceIn"></i><br>
                     <i data-toggle="tooltip" title="Zoom Out" class="fa fa-minus-square fa-3x wow bounceIn"></i><br>

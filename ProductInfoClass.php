@@ -3,8 +3,8 @@
 /*
  * This class consists of methods to fetch data pertaining to an artist from the database.
  */
-require_once('./config/dbConnect.php');
-require_once './Product.php';
+require_once 'dbConnect.php';
+require_once 'Product.php';
 
 class ProductInfo {
 

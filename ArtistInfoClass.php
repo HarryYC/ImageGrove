@@ -7,7 +7,7 @@
 class ArtistInfoClass{
   public function getArtistInfo($artistId)
    {
-        require_once 'config/dbConnect.php';
+        require_once 'dbConnect.php';
         $conn = dbConnect();
         $sql = "select * FROM Artists where Artist_Id =$artistId";
         $res=mysqli_query($conn,$sql);
@@ -26,3 +26,4 @@ if (mysqli_num_rows($res) != 0) { //count the number of rows
 }
 
 ?>
+ */

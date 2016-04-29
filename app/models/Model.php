@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include '../../dbConnect.php';
+include 'dbConnect.php';
 
 class Model {
     

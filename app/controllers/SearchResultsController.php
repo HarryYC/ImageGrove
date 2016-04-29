@@ -5,8 +5,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include_once '../models/SearchResultsModel.php';
-include_once '../../Product.php';
+
+include_once 'app/models/SearchResultsModel.php';
+include_once 'Product.php';
 
 class SearchResultsController {
 

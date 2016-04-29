@@ -30,7 +30,6 @@ class ArtistProfileController {
         
         return $imageRows;
     }
-
 }
 
 ?>
