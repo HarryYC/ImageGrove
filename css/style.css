@@ -1920,3 +1920,10 @@ ul.plan-details{
         padding: 2em 0;
     }
 }
+
+.btn.btn-default.btn-upload:focus,
+.btn.btn-default.btn-upload:active,
+.btn.btn-default.btn-upload:hover{
+    background-color: #008000;
+    color: #FFFFFF;
+}

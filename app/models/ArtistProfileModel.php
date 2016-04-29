@@ -31,5 +31,10 @@ class ArtistProfileModel {
         }
         return $result;
     }
+    
+     public static function pushImageDataToDB($artistID)
+     {
+         
+     }
 }
 ?>

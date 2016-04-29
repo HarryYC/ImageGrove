@@ -6,7 +6,6 @@
     include("./includes/head.php");
     include("app/views/artistProfile/bigPictureView.php");
     include("app/views/artistProfile/imageGridView.php");
-    include("app/views/artistProfile/uploadModalView.php");
     ?> 
 
     <body>
@@ -46,7 +45,7 @@
 
                     <?php
                     //  code to show modal
-                    echo showUploadModal();
+                    include("app/views/artistProfile/uploadModalView.php");
                     ?>
 
 
@@ -102,9 +101,5 @@
 
         </div>
         <!-- /.container -->
-
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/portfolio-js/bootstrap.min.js"></script>
     </body>
 </html>

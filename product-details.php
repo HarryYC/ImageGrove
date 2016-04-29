@@ -36,7 +36,7 @@
                 <div class="container">
                     <div class="row">
                         <span style="color:black;">
-                            <div><b>ArtistName: </b><?php echo "{$imageDetails['UserName']}" ?></div>
+                            <div><b>ArtistName: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
                             <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
                             <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
                             <div style="padding: 12px"> </div>
