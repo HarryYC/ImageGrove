@@ -17,7 +17,7 @@
     }
     ?>
 
-    <div class="container">
+    <div class="container" style="margin-top: 55px;">
         <a href="<?php echo $back_link; ?>"><h4>Back</h4></a>
         <div class="row">
             <h2 class="title text-center"><?php echo $imageDetails['Title']; ?></h2>
