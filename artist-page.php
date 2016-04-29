@@ -23,7 +23,7 @@
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Portfolio Item
+                    <h1 class="page-header" style="margin: 80px 0 20px;">Portfolio Item
                         <small>Item Subheading</small>
                     </h1>
                 </div>
@@ -41,7 +41,7 @@
 
                 <div class="col-md-4">
                     <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Upload Image</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="background-color: #3b5889; border-color: black;">Upload Image</button>
 
                     <?php
                     //  code to show modal
@@ -49,14 +49,15 @@
                     ?>
 
 
-                    <h3>Project Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                    <h3>Project Details</h3>
+                    <h3>Artist Description</h3>
+                    <p>This is the description of my art work in general and where I as an artist write about myself so that when user's look me up they can  
+                        get an idea of who I am and what I do. This piece will be populated by the artist when they sign up for an account.</p>
+                    <h3>Artist Focus</h3>
                     <ul>
-                        <li>Lorem Ipsum</li>
-                        <li>Dolor Sit Amet</li>
-                        <li>Consectetur</li>
-                        <li>Adipiscing Elit</li>
+                        <li>People</li>
+                        <li>Food</li>
+                        <li>Pets</li>
+                        <li>Special Occasions</li>
                     </ul>
                 </div>
 

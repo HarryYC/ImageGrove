@@ -8,7 +8,7 @@ Samuel Gluss
         <!--Modal content-->
         <div class = "modal-content">
             <div class = "modal-header">
-                <button type = "button" class = "close" data-dismiss = "modal">&times</button>
+                <button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal" style="position:absolute; top:10px; right:15px;">&times;</button>
 
                 <h4 class = "modal-title">Upload Image</h4></div>
 
