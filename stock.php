@@ -12,32 +12,6 @@
         ?>
         <div class="stock_box">
             <div class="col-md-2 stock_left">
-                <!--<div class="w_sidebar">
-                    <section class="sky-form">
-                        <h4>Collections</h4>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>All images</label>
-                        </div><div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Standard</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Following</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Lorem Ipsum</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Injected humour</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Default model </label>
-                        </div>
-                    </section>
-                    <section class="sky-form">
-                        <h4>Freshness</h4>
-                        <div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Any time</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Past 3 months</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Past month</label>
-                        </div><div class="col col-4">
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Past week</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Past 3 days</label>
-                            <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Any time</label>
-                        </div>
-                    </section>
-                </div>-->
             </div>
             <div class="col-md-10 sap_tabs">    
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
@@ -63,15 +37,16 @@
                                 if ($numOfResults > 0) {
                                     for ($i = 0; $i < count($searchResults); $i++) {
                                         echo "
-                                            <li><form id='product_details' action='./single.php' method='GET'>
+                                            <li><form id='product_details' action='./product-details.php' method='GET'>
                                                 <input type='hidden' name='image_title' value='{$searchResults[$i]->getTitle()}'/>
+                                                <input type='hidden' name='search_string' value='{$_GET['search_string']}'/>
                                                 <button type='submit' style='padding: 0; border: 0;' name='image_id' value='{$searchResults[$i]->getMediaId()}'>"
                                         . "<img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
                                                 </button>
                                                 <div class='tab_desc'>
-                                                    <p>{$searchResults[$i]->getTitle()}</p>
-                                                    <h4>id#{$searchResults[$i]->getMediaId()}</h4>
-                                                    <p>Price: " . SearchResultsController::findLowestPrice($searchResults[$i]) . "
+                                                    <p>". ucfirst($searchResults[$i]->getTitle()) . "</p>
+                                                    <h4>ID#{$searchResults[$i]->getMediaId()}</h4>
+                                                    <p>Price: " . SearchResultsController::findLowestPrice($searchResults[$i]) . "</p>
                                                     <br><button style='margin:15px 0 0 0; padding: 6px 18px;' type='button' class='btn_3' data-toggle='modal' data-target='#myModal'>Buy</button>
                                                 </div>
                                             </form></li>";

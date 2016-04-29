@@ -6,7 +6,7 @@ class ImageDetailModel {
         // Connect to the database
         //include_once dirname(__FILE__) . '/../models/ArtistProfileModel.php';
       
-        require_once '../../dbConnect.php';
+        require_once 'dbConnect.php';
         $conn = dbConnect();
         $sql = "SELECT Media FROM Media_File WHERE Media_Id =$mediaId";
         $res = mysqli_query($conn, $sql);
@@ -15,7 +15,7 @@ class ImageDetailModel {
     }
         public static function getImageDataFromDB($mediaId) {
         // Connect to the database
-        require_once '../../dbConnect.php';
+        require_once 'dbConnect.php';
         $conn = dbConnect();
         $sql = "SELECT * FROM Media_Metadata INNER JOIN Artists ON 
               Artists.Artist_Id = Media_Metadata.Artist_Id WHERE Media_Metadata.Media_Id =$mediaId";
