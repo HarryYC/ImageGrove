@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         <span style="color:black;">
-                            <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
+                            <div><b>Artist: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
                             <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
                             <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
                             <div style="padding: 12px"> </div>
@@ -57,7 +57,7 @@
                             <?php endif; ?>
                         </span> 
                         <div text-align-left>
-                            <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
+                            <button align =center type="button" class="btn btn-primary btn-md" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
                         </div>
                     </div>
                 </div>
