@@ -1,7 +1,7 @@
 <nav id="nav-bar" class="navbar navbar-fixed-top" role="navigation">
    <div class="container">
    <div class="navbar-header">
-      <a href="index.php"><img class="navbar-brand" src="/images/logo.png"></a>
+      <a href="index.php"><img class="navbar-brand" src="/~s16g07/images/logo.png"></a>
    </div>
    
    <?php if($home_page != "true") : ?>
