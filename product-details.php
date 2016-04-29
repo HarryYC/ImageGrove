@@ -57,7 +57,7 @@
                             <?php endif; ?>
                         </span> 
                         <div text-align-left>
-                            <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#myModal'>Buy this Photo</button>
+                            <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
                         </div>
                     </div>
                 </div>
@@ -73,26 +73,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/main.js"></script>
-<div class="container">
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal" style="position:absolute; top:10px; right:15px;">&times;</button>
-                    <h4 class="modal-title">Thank you!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Please contact us via the Support link or at 1(800)555-5555 and provide the ID number for this image to finalize this purchase.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
+<?php
+//  code to show modal
+include("app/views/imageDetails/buyModal.php");
+?>
 </body>
 </html>
