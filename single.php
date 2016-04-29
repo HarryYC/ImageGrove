@@ -15,7 +15,7 @@
         $currentImage = $productInfo->getProductMetadataById($_GET['image_id']);
         //$artist is an array containing all info about artist from db
         $artist = ArtistInfoClass::getArtistInfo($currentImage['Artist_Id']);
-        $artistName = $artist['Name'];
+//        $artistName = $artist['Name'];
         ?>
         <div class="single">
             <div class="container">
@@ -25,21 +25,14 @@
                     </div>
                     <div class="col-sm-7 col_6">
                         <ul class="size">
+                            <li><?php echo "<p class='movie_option'  style='padding-left:11px;'><strong>Id# : </strong>{$currentImage['Media_Id']}</p>" ?></li>
                             <h3>License Type:</h3>
                             <li><a href="#"><?php echo ucfirst($currentImage['Licenses']); ?></a></li>
                             <!--                            <li><a href="#">Print</a></li>
                                                         <li><a href="#">Web</a></li>
                                                         <li><a href="#">Unlimited</a></li>-->
+                            <li><button style='margin:45px 0 0 0; padding: 6px 18px;' type='button' class='btn_3' data-toggle='modal' data-target='#myModal'>Buy this Photo</button></li>
                         </ul>
-                        <a class="btn_3" href="/buy" id="buy">Buy this Photo</a>
-                        <div class="messagepop pop">
-                            <p>Thank you for purchasing this image!</p>
-                            <p><br>Please contact us via the link above or at 1(800)555-5555 and provide the Id number, #<?php echo "{$currentImage['Media_Id']}" ?>, to finalize this purchase.</p>
-                            <p><br></p>
-                            <a class="close" href="/">Close</a></p>
-                        </div>
-
-                        <?php echo "<p class='movie_option'><strong>Id# : </strong>{$currentImage['Media_Id']}</p>" ?>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -50,6 +43,27 @@
                 <div>Price: <?php echo "{$currentImage['Price']}" ?></div>
                 <div>Artist: <?php echo $artistName ?></div>
                 <div class="tags">
+                </div>
+                <div class="container">
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal" style="position:absolute; top:10px; right:15px;">&times;</button>
+                                    <h4 class="modal-title">Thank you!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please contact us via the Support link or at 1(800)555-5555 and provide the ID number for this image to finalize this purchase.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

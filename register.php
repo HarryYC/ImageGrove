@@ -17,14 +17,16 @@
                             <div class="col-sm-4 col-sm-offset-1">
                                 <div class="login-form"><!--login form-->
                                     <h2>Login to your account</h2>
-                                    <form action="#">
-                                        <input type="text" placeholder="Name" />
-                                        <input type="email" placeholder="Email Address" />
-                                        <span>
-                                            <input type="checkbox" class="checkbox"> 
-                                            Keep me signed in
-                                        </span>
-                                        <button type="submit" class="btn btn-default">Login</button>
+                                    <form action="#" style="align-items: left;">
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                        <div >
+                                            <span>
+                                                <input type="checkbox" class="checkbox"> 
+                                                Keep me signed in
+                                            </span>
+                                        </div>
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block btn-signin">Login</button>
                                     </form>
                                 </div><!--/login form-->
                             </div>
@@ -35,10 +37,10 @@
                                 <div class="signup-form"><!--sign up form-->
                                     <h2>New User Sign up!</h2>
                                     <form action="#">
-                                        <input  style="color: black;" type="text" placeholder="Name"/>
-                                        <input type="email" placeholder="Email Address"/>
-                                        <input type="password" placeholder="Password"/>
-                                        <button type="submit" class="btn btn-default">Sign up</button>
+                                        <input type="text" class="form-control" placeholder="Name"/>
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                        <button type="submit" class="btn btn-lg btn-primary btn-block">Sign up</button>
                                     </form>
                                 </div><!--/sign up form-->
                             </div>

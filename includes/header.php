@@ -5,7 +5,7 @@
       </div>
       <?php if($home_page != "true") : ?>
       <div class="search">
-         <ul class="nav1">
+          <ul class="nav1" style="margin-bottom: 0px;">
             <li id="search">
                <form action="./stock.php" method="get">
                   <input type="text" name="search_string" id="search_text" placeholder="Search"/>
@@ -28,29 +28,8 @@
             <li><a href="#">My Account</a></li>|
             <!--<li><a href="register.php">Contact</a></li>|-->
             <li><a href="support.php">Support</a></li>|
-            <li><a href="register.php">Register</a></li>|
-            <li class="login" >
-               <div id="loginContainer">
-                  <a href="#" id="loginButton"><span>Login</span></a>
-                  <div id="loginBox">
-                     <form id="loginForm">
-                        <fieldset id="body">
-                           <fieldset>
-                              <label for="email">Email Address</label>
-                              <input type="text" name="email" id="email">
-                           </fieldset>
-                           <fieldset>
-                              <label for="password">Password</label>
-                              <input type="password" name="password" id="password">
-                           </fieldset>
-                           <input type="submit" id="login" value="Sign in">
-<!--                           <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>-->
-                        </fieldset>
-                        <span><a href="#">Forgot your password?</a></span>
-                     </form>
-                  </div>
-               </div>
-            </li>
+            <li><a href="register.php">Login</a></li>
+            
          </ul>
       </div>
       <div class="clearfix"></div>

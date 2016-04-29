@@ -8,10 +8,10 @@
                 <div class="span_1_of_1">
                     <!--<h2 style="text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><br>Seach For Media Here</h2>-->
                     <div class="search" style="margin-top: 100px;">
-                        <ul class="nav1">
+                        <ul class="nav1" style="margin-bottom: 0px;">
                             <li id="search">
                                 <form action="./stock.php" method="get">
-                                    <input type="text" name="search_string" id="search_text" placeholder="Search for Image"/>
+                                    <input type="text" name="search_string" id="search_text" placeholder="Search for Image" />
                                     <input type="button" name="search_button" id="search_button">
                                 </form>
                             </li>

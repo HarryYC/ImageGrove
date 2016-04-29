@@ -72,6 +72,7 @@
                                                     <p>{$searchResults[$i]->getTitle()}</p>
                                                     <h4>id#{$searchResults[$i]->getMediaId()}</h4>
                                                     <p>Price: " . SearchResultsController::findLowestPrice($searchResults[$i]) . "
+                                                    <br><button style='margin:15px 0 0 0; padding: 6px 18px;' type='button' class='btn_3' data-toggle='modal' data-target='#myModal'>Buy</button>
                                                 </div>
                                             </form></li>";
                                     }
@@ -81,13 +82,34 @@
                                 ?>
                                 <div class="clearfix"></div>
                             </ul>
-                        </div>                                                                   
-                    </div>  
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
+                            <div class="container">
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
 
-        <?php include("./includes/footer.php"); ?>
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn btn-default" id="closebtn" data-dismiss="modal" style="position:absolute; top:10px; right:15px;">&times;</button>
+                                                <h4 class="modal-title">Thank you!</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Please contact us via the Support link or at 1(800)555-5555 and provide the ID number for this image to finalize this purchase.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>                                                                   
+                        </div>  
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+            <?php include("./includes/footer.php"); ?>
     </body>
 </html>     
