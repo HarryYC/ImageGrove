@@ -1,3 +1,24 @@
+<?php
+//start php session to store information
+if (session_id() === '')
+    session_start();
+
+// session variable to track current page
+$_SESSION['ACTIVE_PAGE'] = $page_title;
+if (isset($_SESSION['email']))
+    $current_user = $_SESSION['email'];
+
+// signout
+if (isset($_SESSION['email']) && isset($_GET['signout'])) {
+    // remove all session variables
+    session_unset();
+    // destroy the session 
+    session_destroy();
+    header('Location:' . $_COOKIE['CURRENT_PAGE']);
+} else {
+    setcookie('CURRENT_PAGE', $_SERVER['REQUEST_URI']);
+}
+?>
 <head>
     <title><?php echo "Image Grove | " . $page_title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">

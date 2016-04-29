@@ -24,14 +24,28 @@
       <?php endif; ?>
       <div class="top_right">
          <ul>
-            <li><a href="index.php">Home</a></li>|
-            <li><a href="#">My Account</a></li>|
-            <!--<li><a href="register.php">Contact</a></li>|-->
-            <li><a href="support.php">Support</a></li>|
-            <li><a href="register.php">Login</a></li>
-            
+ <?php
+if (!isset($_SESSION['email'])) {
+    echo '            
+                      <li><a href="index.php">Home</a></li>|
+                      <li><a href="#">My Account</a></li>|
+                      <!--<li><a href="register.php">Contact</a></li>|-->
+                      <li><a href="support.php">Support</a></li>|
+                      <li><a href="register.php">Sign in</a></li>
+                      ';
+} else {
+    echo '            
+                      <li><a href="index.php">Home</a></li>|
+                      <li><a href="#">My Account</a></li>|
+                      <!--<li><a href="register.php">Contact</a></li>|-->
+                      <li><a href="support.php">Support</a></li>|
+                      <li><a href="?signout=1">Sign out</a></li>
+                      ';
+}
+?>
          </ul>
       </div>
       <div class="clearfix"></div>
    </div>
 </div>
+                      

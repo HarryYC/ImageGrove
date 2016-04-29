@@ -1008,6 +1008,12 @@ ul.tags_images {
     width: 100%;
 }
 
+.signup-form form span input {
+    width: 15px;
+    float: left;
+    height: 15px;
+    margin-right: 5px;
+}
 .login-form form span input {
     width: 15px;
     float: left;
