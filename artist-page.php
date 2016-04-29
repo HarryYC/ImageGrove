@@ -23,8 +23,8 @@
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header" style="margin: 80px 0 20px;">Portfolio Item
-                        <small>Item Subheading</small>
+                    <h1 class="page-header" style="margin: 80px 0 20px;">Artist Name
+                        <!--<small>Item Subheading</small>-->
                     </h1>
                 </div>
             </div>
@@ -89,16 +89,9 @@
             <!-- /.row -->
 
             <hr>
+            <?php include './includes/footer.php'; ?>
 
-            <!-- Footer -->
-            <footer>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; Your Website 2014</p>
-                    </div>
-                </div>
-                <!-- /.row -->
-            </footer>
+            
 
         </div>
         <!-- /.container -->

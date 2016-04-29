@@ -11,7 +11,7 @@
                         <ul class="nav1" style="margin-bottom: 0px;">
                             <li id="search">
                                 <form action="./stock.php" method="get">
-                                    <input type="text" name="search_string" id="search_text" placeholder="Search for Image" />
+                                    <input type="text" name="search_string" id="search_text" placeholder="Search for Images" />
                                     <input type="button" name="search_button" id="search_button">
                                 </form>
                             </li>

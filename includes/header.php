@@ -1,7 +1,7 @@
 <nav id="nav-bar" class="navbar navbar-fixed-top" role="navigation">
    <div class="container">
    <div class="navbar-header">
-     <a href="index.php"><img class="navbar-brand" src="./images/logo.png"></a>
+      <a href="index.php"><img class="navbar-brand" src="./images/logo.png"></a>
    </div>
    
    <?php if($home_page != "true") : ?>
@@ -10,7 +10,7 @@
          <form id="searchForm" class="navbar-form navbar-left" role="search" action="./stock.php" onsubmit="return validateForm()" method="GET">
             <div class="form-group has-feedback">
                <div class="input-group">
-                  <input class="form-control" placeholder="Search for photos" type="text" name="search_string" id="searchbar" value="">
+                  <input class="form-control" placeholder="Search for Images" type="text" name="search_string" id="searchbar" value="">
                   <div class="input-group-btn">
                      <button id="search_button" type="submit" >
                      <i style="color:white;"></i>

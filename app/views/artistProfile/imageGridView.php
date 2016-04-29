@@ -27,7 +27,7 @@ function generateArtistImageGrid() {
                         
                         $retHTML .= "<div class=\"col-sm-3 col-xs-6\"><a href=\"product-details.php?image_title=" . $rowData[$index]['Title'] . "&image_id=" . $rowData[$index]['Media_Id']. "\">";
                         //  this line actually does the image encoding inline, pretty slick
-                        $retHTML .= '<img class="img-responsive portfolio-item" src="data:image/jpeg;base64,' . base64_encode( $rowData[$index]['Media'] ) . '"/>';
+                        $retHTML .= '<img style="height: 140px; width: 200px " class="img-responsive portfolio-item" src="data:image/jpeg;base64,' . base64_encode( $rowData[$index]['Media'] ) . '"/>';
                         $retHTML .= "</a></div>";
                         $index++;
                     }
