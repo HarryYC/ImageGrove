@@ -17,6 +17,7 @@ $retHTML .= '<h4 class = "modal-title">Modal Header</h4></div>';
 $retHTML .= '<div class = "modal-body">';
 $retHTML .= '<p>Some text in the modal.</p></div>';
 $retHTML .= '<div class = "modal-footer">';
+$retHTML .= '<button type = "button" class = "btn btn-default" >Upload</button>';
 $retHTML .= '<button type = "button" class = "btn btn-default" data-dismiss = "modal">Close</button>';
 $retHTML .= '</div></div></div></div>';
 

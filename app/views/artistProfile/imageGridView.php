@@ -2,7 +2,6 @@
 //  Samuel Gluss
 //  4-24-2016
 include_once("app/controllers/ArtistProfileController.php");
-
 // When called, this function generates a grid of images that does not include the first image
 // in a portfolio
 function generateArtistImageGrid() {
@@ -25,8 +24,9 @@ function generateArtistImageGrid() {
                         {
                             return $retHTML;
                         }
+                        
                         $retHTML .= "<div class=\"col-sm-3 col-xs-6\"><a href=\"#\">";
-                        $retHTML .= "<img class=\"img-responsive portfolio-item\" src='./PHP/getImage.php?artistID={$artistID}&index={$index}&type=medium' alt=\"\">";
+                        $retHTML .= '<img class="img-responsive portfolio-item" src="data:image/jpeg;base64,' . base64_encode( $rowData[$index]['Media'] ) . '"/>';
                         $retHTML .= "</a></div>";
                         $index++;
                     }
