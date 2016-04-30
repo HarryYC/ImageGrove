@@ -13,7 +13,7 @@
         <div class="stock_box">
             <div class="col-md-2 stock_left">
             </div>
-            <div class="col-md-10 sap_tabs">    
+            <div class="col-md-10 sap_tabs" style="padding-right: 30px;">    
                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <ul class="resp-tabs-list">
                         <h2 class="resp-tab-item" aria-controls="tab_item-0" role="tab">

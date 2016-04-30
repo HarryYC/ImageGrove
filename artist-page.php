@@ -19,7 +19,6 @@
 
         <!-- Page Content -->
         <div class="container">
-
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
@@ -32,7 +31,6 @@
 
             <!-- Portfolio Item Row -->
             <div class="row">
-
                 <div class="col-md-8">
                     <?php
                     echo getArtistData();

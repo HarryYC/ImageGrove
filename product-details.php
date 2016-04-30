@@ -17,47 +17,42 @@
     }
     ?>
 
-    <div class="container" style="margin-top: 55px;">
+    <div class="container" style="margin-top: 70px;">
         <a href="<?php echo $back_link; ?>"><h4>Back</h4></a>
         <div class="row">
-            <h2 class="title text-center"><?php echo ucfirst($imageDetails['Title']); ?></h2>
-            <div class="col-sm-8 col-sm-offset-3">
-                <div class="product-details">
-                    <!--product-details-->
-                    <div class="col-sm-7">
-                        <div class="view-product">
-                            <img style='height: 100%; width: 100%; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId)); ?>" />  
-                        </div>
-                    </div>
-                </div>
-
-                <!--/product-details-->
-                <div class="container" >
-                    <div class="row">
-                        <span style="color:black;">
-                            <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
-                            <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
-                            <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
-                            <div style="padding: 12px"> </div>
-                            <div><b>Pricing:</b></div>
-                            <?php if ($imageDetails['WebPrice'] != NULL) : ?>
-                                <div class="radio">
-                                    <label class="radio-inline"><input type="radio" name="optradio">Web Price:$<?php echo "{$imageDetails['WebPrice']}" ?></label>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($imageDetails['PrintPrice'] != NULL) : ?>
-                                <div class="radio">
-                                    <label class="radio-inline"><input type="radio" name="optradio">Print Price:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($imageDetails['UnlimitedPrice'] != NULL) : ?>
-                                <div class="radio disabled">
-                                    <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
-                                </div>
-                            <?php endif; ?>
-                        </span> 
-                        <div text-align-left>
-                            <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
+            <div class="col-md-8">
+                <img style='height: 500px; width: 750px; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId)); ?>" />
+            </div>
+            <div class="col-md-4">
+                <h2 class="title text-center"><?php echo ucfirst($imageDetails['Title']); ?></h2>
+                <div class="col-sm-8">
+                    <!--/product-details-->
+                    <div class="container" >
+                        <div class="row">
+                            <div style="color:black;">
+                                <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
+                                <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
+                                <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
+                                <div><b>Pricing:</b></div>
+                                <?php if ($imageDetails['WebPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Web Price:$<?php echo "{$imageDetails['WebPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails['PrintPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Print Price:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails['UnlimitedPrice'] != NULL) : ?>
+                                    <div class="radio disabled" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
+                                    </div>
+                                <?php endif; ?>
+                            </div> 
+                            <div text-align-left>
+                                <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
+                            </div>
                         </div>
                     </div>
                 </div>
