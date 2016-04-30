@@ -10,7 +10,7 @@ function generateArtistImageGrid() {
     
     //  get the first image from the artist controller
     $rowData = ArtistProfileController::getArtistDataFromController();
-    
+
     $artistID = $_GET['artistID'];
     $numImgs = count($rowData);
     

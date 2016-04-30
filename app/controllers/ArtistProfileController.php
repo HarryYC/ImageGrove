@@ -8,10 +8,8 @@ include_once dirname(__FILE__) . '/../models/ArtistProfileModel.php';
 //  the purpose of the controller is to deliver the necessary data from the model (DB)
 //  to whatever view might need it, in an appropriate format
 class ArtistProfileController {
-    
-    public function __construct() {
-        parent::__construct();
-    }
+
+    public static $imageRowsCache = array();
 
     public static function getArtistDataFromController() {
         //  this gets the artist id out of the URL
@@ -19,17 +17,16 @@ class ArtistProfileController {
         //  http://sfsuswe.com/~sgluss/artist-page.php?artistID=53
         $artistID = $_REQUEST['artistID'];
         $data = ArtistProfileModel::getArtistDataFromDB($artistID);
-        
-        $imageRows = array();
-        
-        //  parse the data from the SQL response into an array for easier handling
-        while ($row = $data->fetch_assoc())
-        {
-            $imageRows[] = $row;
+
+        if (empty(ArtistProfileController::$imageRowsCache)) {
+            //  parse the data from the SQL response into an array for easier handling
+            while ($row = $data->fetch_assoc()) {
+                ArtistProfileController::$imageRowsCache[] = $row;
+            }
         }
-        
-        return $imageRows;
+        return ArtistProfileController::$imageRowsCache;
     }
+
 }
 
 ?>

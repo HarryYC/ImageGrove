@@ -29,6 +29,10 @@ class ArtistProfileModel {
             $result = $dbLink->query($sql);
             ArtistProfileModel::$DBCache[$sql] = $result;
         }
+        
+        //  close connection, necessary to allow the class to be used again
+        mysqli_close($dbLink);
+        
         return $result;
     }
     
