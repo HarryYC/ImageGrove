@@ -85,13 +85,8 @@
 
             </div>
             <!-- /.row -->
-
-            <hr>
-            <?php include './includes/footer.php'; ?>
-
-            
-
         </div>
         <!-- /.container -->
+        <?php include './includes/footer.php'; ?>
     </body>
 </html>
