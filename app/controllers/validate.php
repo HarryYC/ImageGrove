@@ -78,6 +78,7 @@ if ($uploadOk) {
         echo '<br/>Error! Failed to insert the image metadata';
     }
     
+    dbConClose($dbLink);
     //  go back to the appropriate artist page
     header('Location: ../../artist-page.php?artistID=' . $artistID);
 }

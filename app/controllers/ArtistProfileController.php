@@ -10,7 +10,8 @@ include_once dirname(__FILE__) . '/../models/ArtistProfileModel.php';
 class ArtistProfileController {
 
     public static $imageRowsCache = array();
-
+    public static $image;
+    public static $artistMetaData = array();
     public static function getArtistDataFromController() {
         //  this gets the artist id out of the URL
         //  so a URL should be structured like this example:
@@ -25,6 +26,30 @@ class ArtistProfileController {
             }
         }
         return ArtistProfileController::$imageRowsCache;
+    }
+
+    public static function getArtistMetaDataFromController($artistID) {
+        //  get all the metadata for one specific artist
+        $data = ArtistProfileModel::getMediaMetaDataDataFromDB($artistID);
+
+        //  get data out of mysqli result and put into array for easy parsing
+        while ($row = $data->fetch_assoc()) {
+            ArtistProfileModel::$DBImageMetaDataCache[] = $row;
+        }
+
+        return ArtistProfileModel::$DBImageMetaDataCache;
+    }
+
+    public static function getMediaFromController($mediaID) {
+        //  just get one image file, so no parsing necessary
+        $data = ArtistProfileModel::getMediaDataFromDB($mediaID);
+
+        //  get data out of mysqli result and put into array for easy parsing
+        while ($row = $data->fetch_assoc()) {
+            ArtistProfileModel::$DBImageCache = $row;
+        }
+
+        return ArtistProfileModel::$DBImageCache;
     }
 
 }

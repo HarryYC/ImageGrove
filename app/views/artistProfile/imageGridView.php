@@ -8,11 +8,12 @@ function generateArtistImageGrid() {
     $retHTML = "";
     // TODO : Sam - make it so that this script will ignore a specified image, other than the first if needed
     
-    //  get the first image from the artist controller
-    $rowData = ArtistProfileController::getArtistDataFromController();
-
-    $artistID = $_GET['artistID'];
-    $numImgs = count($rowData);
+    //  get the necessary metadata (including thumbnails) from the artist controller
+    //  this will allow thumbnail generation and proper linking to associated image details pages
+    $artistID = $_REQUEST['artistID'];
+    $metaData = ArtistProfileController::getArtistMetaDataFromController($artistID);    
+    //  please note the -1 decrement here. Not exactly sure why the count is off, but it is consistent for all artists
+    $numImgs = count($metaData) - 1;
     
     //  output all but the first image
             $index = 1;
@@ -25,9 +26,9 @@ function generateArtistImageGrid() {
                             return $retHTML;
                         }
                         
-                        $retHTML .= "<div class=\"col-sm-3 col-xs-6\"><a href=\"product-details.php?image_title=" . $rowData[$index]['Title'] . "&image_id=" . $rowData[$index]['Media_Id']. "\">";
+                        $retHTML .= "<div class=\"col-sm-3 col-xs-6\"><a href=\"product-details.php?image_title=" . $metaData[$index]['Title'] . "&image_id=" . $metaData[$index]['Media_Id']. "\">";
                         //  this line actually does the image encoding inline, pretty slick
-                        $retHTML .= '<img style="height: 140px; width: 200px " class="img-responsive portfolio-item" src="data:image/jpeg;base64,' . base64_encode( $rowData[$index]['ThumbNail'] ) . '"/>';
+                        $retHTML .= '<img style="height: 140px; width: 200px " class="img-responsive portfolio-item" src="data:image/jpeg;base64,' . base64_encode( $metaData[$index]['ThumbNail'] ) . '"/>';
                         $retHTML .= "</a></div>";
                         $index++;
                     }
