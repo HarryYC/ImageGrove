@@ -19,6 +19,9 @@ $webPrice = mysqli_real_escape_string($dbLink, $_POST['web-price']);
 $printPrice = mysqli_real_escape_string($dbLink, $_POST['print-price']);
 $unlimPrice = mysqli_real_escape_string($dbLink, $_POST['unlim-price']);
 $artistID = $_REQUEST['artistID'];
+// thumbnail
+$thumbnailImage = resize(230, "../../uploads/thumbnail", ($_FILES['pic']['tmp_name']));
+$thumbnailData = addslashes(file_get_contents("../../uploads/thumbnail"));
 
 //  image validation
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -63,7 +66,7 @@ $query2 = "
                 `Media_Id`, `Artist_Id`, `Title`, `Description`, `ThumbNail`, `WebPrice`, 
                 `PrintPrice`, `UnlimitedPrice`, `Keywords`, `BlockStatus`
             )
-            VALUES ('{$last_id}', '{$artistID}', '{$title}', '{$desc}', '{$pic}',"
+            VALUES ('{$last_id}', '{$artistID}', '{$title}', '{$desc}', '{$thumbnailData}',"
         . " '{$webPrice}', '{$printPrice}', '{$unlimPrice}', '{$tags}', '0')";
 
 if ($uploadOk) {
@@ -78,3 +81,49 @@ if ($uploadOk) {
     //  go back to the appropriate artist page
     header('Location: ../../artist-page.php?artistID=' . $artistID);
 }
+
+unlink("../../uploads/thumbnail");
+
+function resize($newWidth, $targetFile, $originalFile) {
+
+    $info = getimagesize($originalFile);
+    list($width, $height) = $info;
+    $mime = $info['mime'];
+
+    switch ($mime) {
+        case 'image/jpeg':
+            $image_create_func = 'imagecreatefromjpeg';
+            $image_save_func = 'imagejpeg';
+            $new_image_ext = 'jpg';
+            break;
+
+        case 'image/png':
+            $image_create_func = 'imagecreatefrompng';
+            $image_save_func = 'imagepng';
+            $new_image_ext = 'png';
+            break;
+
+        case 'image/gif':
+            $image_create_func = 'imagecreatefromgif';
+            $image_save_func = 'imagegif';
+            $new_image_ext = 'gif';
+            break;
+
+        default:
+            echo "The format used is not supportted: " . $mime;
+            throw new Exception('Unknown image type.');
+    }
+
+    $img = $image_create_func($originalFile);
+    
+
+    $newHeight = ($height / $width) * $newWidth;
+    $tmp = imagecreatetruecolor($newWidth, $newHeight);
+    imagecopyresampled($tmp, $img, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+    if (file_exists($targetFile)) {
+        unlink($targetFile);
+    }
+    $image_save_func($tmp, "$targetFile");
+}
+?>

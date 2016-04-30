@@ -46,9 +46,12 @@ Samuel Gluss
                         <label class = "col-sm-2 control-label" for = "inputDesc" >Unlimited Price</label>
                         <div class = "col-sm-2">
                             <input type = "text" class = "form-control" name = "unlim-price" placeholder = "0"/>
-                        </div></div>
-                    <button type="submit" id="submit-file-btn" class = "btn btn-default btn-upload" >Upload</button>
-                    <button type = "button" value="Send" class = "btn btn-default" data-dismiss = "modal">Close</button>
+                        </div>
+                    </div>
+                    <div align="center" style="padding-top: 30px">
+                        <button type="submit" id="submit-file-btn" class = "btn btn-default btn-upload" style="margin-right: 30px">Upload</button>
+                        <button type = "button" value="Send" class = "btn btn-default" data-dismiss = "modal" style="margin-left: 30px" >Close</button>
+                    </div>
                 </form >
             </div>
             <div class = "modal-footer">

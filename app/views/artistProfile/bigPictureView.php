@@ -7,7 +7,7 @@
 function getArtistData() {
     //  generate a big image from the first image in an artist's portfolio
     $artistID = $_GET['artistID'];
-    return "<img src='./PHP/getImage.php?artistID={$artistID}&index=0&type=medium' class='img-responsive' alt=''/>";
+    return "<img src='./PHP/getImage.php?artistID={$artistID}&index=0&type=medium' class='img-responsive' alt='' style='height: 500px; width:750px;' />";
 }
 
 ?>

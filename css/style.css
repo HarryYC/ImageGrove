@@ -551,7 +551,7 @@ ul.tab_img{
 }
 ul.tab_img li {
     float: left;
-    width: 15%;
+    /*width: 15%;*/
     margin: 0 2% 2% 0;
 }
 ul.tab_img li a:hover{
@@ -564,6 +564,7 @@ ul.tab_img li.last{
     padding: 10px;
     list-style: none;
     border: 1px solid #f0f0f0;
+    margin-top: -10px;
 }
 .tab_desc p, .tab_desc1 p{
     font-size: 0.8125em;
@@ -1938,6 +1939,6 @@ ul.plan-details{
 .btn.btn-default.btn-upload:focus,
 .btn.btn-default.btn-upload:active,
 .btn.btn-default.btn-upload:hover{
-    background-color: #008000;
+    background-color: #3b5889;
     color: #FFFFFF;
 }

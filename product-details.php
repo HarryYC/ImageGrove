@@ -20,7 +20,7 @@
     <div class="container" style="margin-top: 55px;">
         <a href="<?php echo $back_link; ?>"><h4>Back</h4></a>
         <div class="row">
-            <h2 class="title text-center"><?php echo $imageDetails['Title']; ?></h2>
+            <h2 class="title text-center"><?php echo ucfirst($imageDetails['Title']); ?></h2>
             <div class="col-sm-8 col-sm-offset-3">
                 <div class="product-details">
                     <!--product-details-->
@@ -32,10 +32,10 @@
                 </div>
 
                 <!--/product-details-->
-                <div class="container">
+                <div class="container" >
                     <div class="row">
                         <span style="color:black;">
-                            <div><b>Artist: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
+                            <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
                             <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
                             <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
                             <div style="padding: 12px"> </div>
@@ -57,7 +57,7 @@
                             <?php endif; ?>
                         </span> 
                         <div text-align-left>
-                            <button align =center type="button" class="btn btn-primary btn-md" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
+                            <button align =center type="button" class="btn btn-primary btn-sm" data-toggle='modal' data-target='#buyModal'>Buy this Photo</button>
                         </div>
                     </div>
                 </div>
