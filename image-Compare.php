@@ -1,9 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<!-- OVERALL REVIEW (Marisa): Overall, the code looks good. Just some minor things were off. -->
+<!DOCTYPE html>
 <html lang="en">
     <?php
     $page_title = "product-details";
     include("./includes/head.php");
     include("app/views/imageDetails/imageDetailView.php");
+    /* 
+    *   REVIEW (Marisa): The image IDs will be sent from stock.php as an array. Therefore
+    *   the following $_GET variables will have to change accordingly. The array is called
+    *   "compare" and can be accessed through $_GET['compare'].
+    */
     $mediaId1 = $_GET['image_id'];
     $mediaId2 = $_GET['image_id2'];
     $imageDetails = DisplayData($mediaId1);
@@ -42,6 +48,7 @@
                             <div class="radio">
                                 <label class="radio-inline"><input type="radio" name="optradio">PrintPrice:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
                             </div>
+                            <!-- REVIEW (Marisa): Is this button disabled because Unlimited Price column is NULL in the DB? -->
                             <div class="radio disabled">
                                 <label class="radio-inline"><input type="radio" name="optradio">UnlimitedPrice:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
                             </div>
