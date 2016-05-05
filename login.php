@@ -20,13 +20,18 @@ echo '<div class="grid_2" style="padding-top: 60px;"><div class="container"> ';
 
 if ($email == "" || $password == "") {
     echo "<p>Please type in email and password</p>";
+    echo '<div class="clearfix"></div><a href="javascript:history.back()">Go Back</a></div></div>';
 } else {
     if ($userType == "Artist") {
         $checkExist  = "SELECT * FROM Artists WHERE Username = '{$email}' AND Password = '{$password}'";
         $checkResult = mysqli_query($_conn, $checkExist);
         if (mysqli_num_rows($checkResult) > 0) {
+            $row = $checkResult->fetch_array();
             $_SESSION['email']    = $email;
             $_SESSION['userType'] = $userType;
+            $_SESSION['accountID'] = $row['Artist_Id'];
+            $_SESSION['blockStatus'] = $row['BlockStatus'];
+            $_SESSION['userName'] = $row['Name'];
             echo "Login successful!";
         } else {
             echo '<div id="auth-error-message-box" class="a-box a-alert a-alert-error auth-server-side-message-box a-spacing-base"><div class="a-box-inner a-alert-container"><h4 class="a-alert-heading">There was a problem</h4><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
@@ -40,9 +45,12 @@ if ($email == "" || $password == "") {
         $checkExist  = "SELECT * FROM Customers WHERE Username = '{$email}' AND Password = '{$password}'";
         $checkResult = mysqli_query($_conn, $checkExist);
         if (mysqli_num_rows($checkResult) > 0) {
-            
+            $row = $checkResult->fetch_array();
             $_SESSION['email']    = $email;
             $_SESSION['userType'] = $userType;
+            $_SESSION['customerID'] = $row['Customer_Id'];
+            $_SESSION['blockStatus'] = $row['BlockStatus'];            
+            $_SESSION['userName'] = $row['Name'];            
             echo "Login successful!";
         } else {
             echo '<div id="auth-error-message-box" class="a-box a-alert a-alert-error auth-server-side-message-box a-spacing-base"><div class="a-box-inner a-alert-container"><h4 class="a-alert-heading">There was a problem</h4><i class="a-icon a-icon-alert"></i><div class="a-alert-content">
@@ -54,9 +62,9 @@ if ($email == "" || $password == "") {
         }
     }
     $_conn->close();
-    
+    echo '<div class="clearfix"></div><a href="index.php">Go to Home Page</a></div></div>';
 }
-echo '<div class="clearfix"></div><a href="javascript:history.back()">Go Back</a></div></div>';
+
 include("./includes/footer.php");
 echo "</body>";
 ?>

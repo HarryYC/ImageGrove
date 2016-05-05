@@ -39,7 +39,14 @@
                                      <li><a href="#">My Account</a></li>|
                                      <!--<li><a href="register.php">Contact</a></li>|-->
                                      <li><a href="support.php">Support</a></li>|
+                                     <li class="dropdown">
+                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                     <font id="nav-choice">' . $_SESSION['userName'] .'
+                                     <span class="caret"></span></font></a>
+                                     <ul class="dropdown-Menu">
                                      <li><a href="?signout=1">Sign out</a></li>
+                                     <li><a href="artist-page.php?artistID=53">Artist Page</a></li>
+                                     </ul>
                                      ';
                }
                echo '</ul></div>';
