@@ -1972,3 +1972,20 @@ ul.plan-details{
     background-color: #3b5889;
     color: #FFFFFF;
 }
+
+.portfolio-item-div
+{
+    margin-bottom: 25px;
+}
+
+.portfolio-custom
+{
+    margin-bottom: 0px;
+}
+
+.btn.btn-danger.deleteButton
+{
+    margin-top: 5px;
+    margin-left: 0%;
+    display: table;
+}

@@ -38,10 +38,10 @@
                 </div>
 
                 <div class="col-md-4">
-                    <!-- Trigger the modal with a button -->
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="background-color: #3b5889; border-color: black;">Upload Image</button>
-
+                  
                     <?php
+                    // Trigger the modal with a button
+                    include("app/views/artistProfile/uploadButton.php");
                     //  code to show modal
                     include("app/views/artistProfile/uploadModalView.php");
                     ?>

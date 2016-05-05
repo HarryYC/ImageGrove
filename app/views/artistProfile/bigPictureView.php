@@ -8,6 +8,7 @@ include_once("app/controllers/ArtistProfileController.php");
 function getArtistData() {
     $artistID = $_REQUEST['artistID'];
     $metaData = ArtistProfileController::getArtistMetaDataFromController($artistID);
+    
     $mediaID = $metaData[0]['Media_Id'];
     
     $imageData = ArtistProfileController::getMediaFromController($mediaID);
