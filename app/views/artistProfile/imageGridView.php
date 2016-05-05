@@ -12,7 +12,7 @@ function generateArtistImageGrid() {
     //  get the necessary metadata (including thumbnails) from the artist controller
     //  this will allow thumbnail generation and proper linking to associated image details pages
     $artistID = $_REQUEST['artistID'];
-    $metaData = ArtistProfileController::getArtistMetaDataFromController($artistID);    
+    $metaData = ArtistProfileController::getArtistMediaMetaDataFromController($artistID);    
     //  please note the -1 decrement here. Not exactly sure why the count is off, but it is consistent for all artists
     $numImgs = count($metaData) - 1;
     

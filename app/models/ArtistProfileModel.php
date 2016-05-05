@@ -11,13 +11,10 @@ class ArtistProfileModel {
     //      MEG - maybe teach sam how to do this correctly :)
     
 //  This cache will not work if the data changes in the database
-    public static $DBCache = array();
+    public static $DBArtistDataCache = array();
     public static $DBImageCache = array();
     public static $DBImageMetaDataCache = array();
 
-    //  This extremely wasteful method is now DEPRECATED
-    //  DO NOT USE IT
-    //  thanks, the management
     public static function getArtistDataFromDB($artistID) {
         // Connect to the database
         $config = parse_ini_file('../config/config.ini');
@@ -28,17 +25,15 @@ class ArtistProfileModel {
         }
         $artistID = mysqli_real_escape_string($dbLink, $artistID);
         
-        // This query is kinda gnarly
-        // it gets all items from the Media_Metadata table which matches the artist ID
-        // it also obtains all images from the Media_File table which have Media_Id's present in the matched Media_Metadata entries
-        $sql = "SELECT * FROM `Media_Metadata` INNER JOIN `Media_File` ON `Media_Metadata`.Media_Id=`Media_File`.Media_Id WHERE Artist_Id = {$artistID}";
+        //  This query gets all the relevant artist metadata that might be displayed on the artist page
+        $sql = "SELECT Name, ArtistDesc, BlockStatus FROM `Artists` WHERE Artist_Id = {$artistID}";
 
         //  if the appropriate data was already cached, just use it. Otherwise, query the DB
-        if (array_key_exists($sql, ArtistProfileModel::$DBCache)) {
-            $result = ArtistProfileModel::$DBCache[$sql];
+        if (array_key_exists($sql, ArtistProfileModel::$DBArtistDataCache)) {
+            $result = ArtistProfileModel::$DBArtistDataCache[$sql];
         } else {
             $result = $dbLink->query($sql);
-            ArtistProfileModel::$DBCache[$sql] = $result;
+            ArtistProfileModel::$DBArtistDataCache[$sql] = $result;
         }
 
         //  close connection, necessary to allow the class to be used again
@@ -97,10 +92,5 @@ class ArtistProfileModel {
         return $result;
     }
 
-    public static function pushImageDataToDB($artistID) {
-        
-    }
-
 }
-
 ?>
