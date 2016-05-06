@@ -14,8 +14,19 @@ class SearchResultsModel extends Model {
      * returns an array of Product objects
      */
 
-    function getAllProductsByKeyword($keyword) {
+    function getAllProductsByDesc($keyword) {
         $sql = "SELECT * FROM `Media_Metadata` WHERE description LIKE '%{$keyword}%'";
+        $result = mysqli_query($this->_conn, $sql);
+        return $result;
+    }
+    /* getAllProductsByKeyword retrieves the product metadata from the Media_Metadata table in
+     * the database. For each for in the table that matches the query, a Product object
+     * is created with the row's data.
+     * returns an array of Product objects
+     */
+
+    function getAllProductsByKeyword($keyword) {
+        $sql = "SELECT * FROM `Media_Metadata` WHERE keywords LIKE '%{$keyword}%'";
         $result = mysqli_query($this->_conn, $sql);
         return $result;
     }

@@ -10,7 +10,11 @@ include_once 'app/models/SearchResultsModel.php';
 include_once 'Product.php';
 
 class SearchResultsController {
-
+    /* 
+     * resultToArray takes a mySQLi result, fetches the rows as objects and
+     * creates Product objects to hold the row data. 
+     * returns an array of Product objects
+     */
     function resultToArray($result){
         $array = array();
         if ($result) {
@@ -22,7 +26,7 @@ class SearchResultsController {
                 array_push($array, $product);
             }
         } else {
-            echo "error with db query";
+            echo "error with db result";
         }
         return $array;
     }
@@ -42,16 +46,20 @@ class SearchResultsController {
         $webPrice = $product->getWebPrice();
         $printPrice = $product->getPrintPrice();
         $unlimitedPrice = $product->getUnlimitedPrice();
+        $type = "";
         if ($webPrice != NULL){
             $lowestPrice = $webPrice;
+            $type = "Web";
         }
         if (($printPrice != NULL) && ($webPrice > $printPrice)){
             $lowestPrice = $printPrice;
+            $type = "Print";
         }
         if (($unlimitedPrice != NULL) && ($lowestPrice > $unlimitedPrice)){
             $lowestPrice = $unlimitedPrice;
+            $type = "Unlimited";
         }
-        return $lowestPrice;
+        return array($lowestPrice, $type);
             
     }
 
