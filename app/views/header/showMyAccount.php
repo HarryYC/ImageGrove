@@ -18,7 +18,7 @@ function showMyAccountIfLoggedIn()
         var_dump($_SESSION);
     }
     //  first, check to see if user is logged in, by seeing if session even has a 'usertype' property yet
-    if (array_key_exists('userType', $_SESSION))
+    if (isset($_SESSION['email']))
     {
         //  build correct HTML return based on the account type
         $retHTML = '<li><a href="';

@@ -8,15 +8,14 @@ $( document ).ready(function() {
     
     $(".deleteButton").click(function(){
         mediaID = event.target.id;
-    });
-    
-    $( "#confirmDeleteModal" ).on('shown.bs.modal', function(){
-        //  update form submission
+        
+                //  update form submission
         $( "#deleteImageForm" ).attr('action', "app/controllers/deleteImage.php?mediaID=" + mediaID + "&artistID=" + get('artistID'));
            
         //   update modal dialog, change this to have image title later
         $("#deleteModalDialogText").html("Are you sure you want to delete image " + mediaID);
     });
+    
 });
 
 //  this function allows the retrieval of Request parameters
