@@ -1,4 +1,4 @@
-﻿<!-- OVERALL REVIEW (Marisa): Overall, the code looks good. Just some minor things were off. -->
+<!-- OVERALL REVIEW (Marisa): Overall, the code looks good. Just some minor things were off. -->
 <!DOCTYPE html>
 <html lang="en">
     <?php
@@ -10,8 +10,13 @@
     *   the following $_GET variables will have to change accordingly. The array is called
     *   "compare" and can be accessed through $_GET['compare'].
     */
-    $mediaId1 = $_GET['image_id'];
-    $mediaId2 = $_GET['image_id2'];
+    
+   // $mediaId1 = $_GET['image_id']; 
+   // $mediaId2 = $_GET['image_id2'];
+    //incorporating the changes according to the review to enable the integration
+    $array = $_GET['compare'];
+    $mediaId1 = $array[0];
+    $mediaId2 = $array[1];
     $imageDetails = DisplayData($mediaId1);
     $imageDetails2 = DisplayData($mediaId2);
     ?>
@@ -49,7 +54,9 @@
                                 <label class="radio-inline"><input type="radio" name="optradio">PrintPrice:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
                             </div>
                             <!-- REVIEW (Marisa): Is this button disabled because Unlimited Price column is NULL in the DB? -->
-                            <div class="radio disabled">
+                            <!-- incorporating the review comments : This was disabled to test and was left behind. Enabling it.
+                            <div class="radio disabled">-->
+                            <div class ="radio">
                                 <label class="radio-inline"><input type="radio" name="optradio">UnlimitedPrice:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
                             </div>
                         </span> 
