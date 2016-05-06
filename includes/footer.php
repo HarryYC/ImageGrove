@@ -15,13 +15,13 @@
                 <div class="col_1_of_5 span_1_of_5">
                     <ul class="list1">
                         <li><a href="./stock.php?search_string=Celebrities">Celebrities</a></li>
-                        <li><a href="./stock.php?search_string=Editorial">Holidays</a></li>
+                        <li><a href="./stock.php?search_string=Holidays">Holidays</a></li>
                         <li><a href="./stock.php?search_string=Education">Education</a></li>
                     </ul>
                 </div>
                 <div class="col_1_of_5 span_1_of_5">
                     <ul class="list1">
-                        <li><a href="./stock.php?search_string=Interiors">Objects</a></li>
+                        <li><a href="./stock.php?search_string=Objects">Objects</a></li>
                         <li><a href="./stock.php?search_string=Miscellaneous">Miscellaneous</a></li>
                         <li><a href="./stock.php?search_string=Model">Model</a></li>
                     </ul>

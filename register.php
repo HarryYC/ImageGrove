@@ -20,15 +20,7 @@
                                     <form method="post" action="login.php" style="align-items: left;">
                                         <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                                         <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                                        <div>
-                                        <span>
-                                        <input type="radio" name="type" value="Artist">Artist<br>
-                                        </span>
-                                        <br>
-                                        <span>                                        
-                                        <input type="radio" name="type" value="Costumer">Customer<br>
-                                        </span>
-                                        <br>                                        
+                                        <div>                                       
                                             <span>
                                                 <input type="checkbox" class="checkbox"> 
                                                 Keep me signed in
