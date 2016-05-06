@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
+
+<!--code review 5/6/2016: Name of the file needs to be changed to reflect the functionality-->
 <html>
     <?php
     $page_title = "Search Results";
     include("./includes/head.php");
     include("./app/controllers/SearchResultsController.php");
     ?>
+    <!--code review 5/6/2016: style tags should be moved to main css file-->
     <style>
         button.accordion {
             background-color: #3b5889;
@@ -62,7 +65,7 @@
         }
         $numOfResults = count($searchResults);
         ?>
-        <div class="stock_box">
+        <div class="stock_box"> <!--Code review:5/6/2016 :dead tag should be closed or removed-->
             <div class="col-md-2 stock_left">
                 <button class="accordion">Compare</button>
                 <div class="panel">
@@ -132,7 +135,7 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
-
+           <!-- <!--Code review:5/6/2016 :Probably it is a good idea to move js functions to separate file-->-->
             <?php include("./includes/footer.php"); ?>
             <script>
                 var acc = document.getElementsByClassName("accordion");
