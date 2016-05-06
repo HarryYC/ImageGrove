@@ -3,6 +3,7 @@
 //  4-24-2016
 include_once("app/controllers/ArtistProfileController.php");
 include_once("app/controllers/checkArtistLogin.php");
+include_once("app/views/artistProfile/uploadButton.php");
 // When called, this function generates a grid of images that does not include the first image
 // in a portfolio
 function generateArtistImageGrid() {
@@ -23,7 +24,11 @@ function generateArtistImageGrid() {
                     for ($j = 0; $j < 4; $j++) {
                         //  terminate once all available images have been printed
                         if($index >= $numImgs)
-                        {
+                        {   
+                            //  add extra image upload button
+                            $retHTML .= "<div class=\"col-sm-3 col-xs-6 portfolio-item-div\"><div style=\"display: table; margin: 25% 0;\">";
+                            $retHTML .= getUploadButton();
+                            $retHTML .= '</div></div>';
                             return $retHTML;
                         }
                         
@@ -35,13 +40,16 @@ function generateArtistImageGrid() {
                         //  only add delete button if correct artist is logged in
                         if(checkArtistLogin())
                         {
-                            $retHTML .= '<button type="button" class="btn btn-danger deleteButton" id="' . $metaData[$index]['Media_Id']. '">Delete</button>';
+                            $retHTML .= '<button type="button" class="btn btn-danger deleteButton" data-toggle="modal" data-target="#confirmDeleteModal" id="' . $metaData[$index]['Media_Id']. '">Delete</button>';
                         }
                         $retHTML .= '</div></div>';
                         $index++;
                     }
                     $retHTML .= "<br>";
                 }
+                $retHTML .= "<div class=\"col-sm-3 col-xs-6 portfolio-item-div\"><div style=\"display: inline-block;\">";
+                $retHTML .= getUploadButton();
+                $retHTML .= '</div></div>';
                 return $retHTML;
 }
 ?>

@@ -1,9 +1,8 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *  Samuel Gluss
+ *  4-28-2016
  */
 
 include_once dirname(__FILE__) . '/../../dbConnect.php';
@@ -19,7 +18,8 @@ $webPrice = mysqli_real_escape_string($dbLink, $_POST['web-price']);
 $printPrice = mysqli_real_escape_string($dbLink, $_POST['print-price']);
 $unlimPrice = mysqli_real_escape_string($dbLink, $_POST['unlim-price']);
 $artistID = $_REQUEST['artistID'];
-// thumbnail
+
+// thumbnail generation
 $thumbnailImage = resize(230, "../../uploads/thumbnail", ($_FILES['pic']['tmp_name']));
 $thumbnailData = addslashes(file_get_contents("../../uploads/thumbnail"));
 
@@ -79,11 +79,10 @@ if ($uploadOk) {
     }
     
     dbConClose($dbLink);
+    
     //  go back to the appropriate artist page
     header('Location: ../../artist-page.php?artistID=' . $artistID);
 }
-
-unlink("../../uploads/thumbnail");
 
 function resize($newWidth, $targetFile, $originalFile) {
 
@@ -123,6 +122,7 @@ function resize($newWidth, $targetFile, $originalFile) {
     imagecopyresampled($tmp, $img, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
     if (file_exists($targetFile)) {
+        chmod($targetFile, 0777);
         unlink($targetFile);
     }
     $image_save_func($tmp, "$targetFile");

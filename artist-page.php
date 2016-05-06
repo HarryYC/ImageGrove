@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- head includes -->
-    <?php
+        <?php
     $page_title = "Artist";
     include("./includes/head.php");
     include("app/views/artistProfile/bigPictureView.php");
     include("app/views/artistProfile/imageGridView.php");
     include("app/views/artistProfile/getArtistInfo.php");
+    include_once("app/views/artistProfile/uploadButton.php");
     ?> 
 
     <body>
@@ -15,7 +16,7 @@
         $home_page = "false";
         include("./includes/header.php");
         ?>
-
+        
         <!-- Navigation -->
 
         <!-- Page Content -->
@@ -42,7 +43,7 @@
                   
                     <?php
                     // Trigger the modal with a button
-                    include("app/views/artistProfile/uploadButton.php");
+                    echo getUploadButton();
                     //  code to show modal
                     include("app/views/artistProfile/uploadModalView.php");
                     ?>
@@ -74,6 +75,7 @@
                 <?php
                 //  generate a grid of images
                 echo generateArtistImageGrid();
+                include("app/views/artistProfile/deleteModalView.php");
                 ?>
 
                 <div class="col-sm-2 imageControlsAndShare" style="white-space: nowrap; width: 2%;">
@@ -90,5 +92,8 @@
         </div>
         <!-- /.container -->
         <?php include './includes/footer.php'; ?>
+        
+        <!-- script to make delete buttons work -->
+        <script src="js/artist-page/deleteButton.js"></script>
     </body>
 </html>

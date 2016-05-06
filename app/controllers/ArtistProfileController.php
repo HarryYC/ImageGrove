@@ -44,7 +44,6 @@ class ArtistProfileController {
 
         return ArtistProfileModel::$DBImageCache;
     }
-
 }
 
 ?>

@@ -3,7 +3,8 @@ Samuel Gluss
 4-28-2016
 -->
 
-<div id = "myModal" class = "modal fade" role = "dialog">
+
+<div id = "uploadModal" class = "modal fade" role = "dialog">
     <div class = "modal-dialog">
         <!--Modal content-->
         <div class = "modal-content">
