@@ -7,7 +7,7 @@
    <?php if($home_page != "true") : ?>
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-         <form id="searchForm" class="navbar-form navbar-left" role="search" action="./stock.php" onsubmit="return validateForm()" method="GET">
+         <form id="searchForm" class="navbar-form navbar-left" role="search" action="./search-results.php" onsubmit="return validateForm()" method="GET">
             <div class="form-group has-feedback">
                <div class="input-group">
                   <input class="form-control" placeholder="Search for Images" type="text" name="search_string" id="searchbar" value="">

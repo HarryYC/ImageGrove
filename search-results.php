@@ -8,51 +8,8 @@
     include("./app/controllers/SearchResultsController.php");
     ?>
     <!--code review 5/6/2016: style tags should be moved to main css file-->
-    <style>
-        button.accordion {
-            background-color: #3b5889;
-            color: #FFF;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-            margin: 100px 0px 0px 0px;
-        }
-
-        button.accordion.active, button.accordion:hover {
-            background-color: #4d72b3;
-        }
-
-        button.accordion:after {
-            content: '\25BC';
-            font-size: 13px;
-            color: #FFF;
-            float: right;
-            margin-left: 5px;
-        }
-
-        button.accordion.active:after {
-            content: "\25B2";
-        }
-
-        div.panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: 0.6s ease-in-out;
-            opacity: 0;
-        }
-
-        div.panel.show {
-            opacity: 1;
-            max-height: 500px;  
-        }
-    </style>
+    <!-- As per code review(5/6/16): CSS moved to compare-modal.css -->
+    <link rel="stylesheet" type="text/css" href="css/compare-modal.css">
     <body>
         <?php
         $home_page = "false";
@@ -65,7 +22,8 @@
         }
         $numOfResults = count($searchResults);
         ?>
-        <div class="stock_box"> <!--Code review:5/6/2016 :dead tag should be closed or removed-->
+        <!--Code review:5/6/2016 :dead tag should be closed or removed-->
+        <!-- As per code review (5/6/16): removed dead tag -->
             <div class="col-md-2 stock_left">
                 <button class="accordion">Compare</button>
                 <div class="panel">
@@ -135,54 +93,9 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
-           <!-- <!--Code review:5/6/2016 :Probably it is a good idea to move js functions to separate file-->-->
+           <!--Code review:5/6/2016 :Probably it is a good idea to move js functions to separate file-->
             <?php include("./includes/footer.php"); ?>
-            <script>
-                var acc = document.getElementsByClassName("accordion");
-                var i;
-
-                for (i = 0; i < acc.length; i++) {
-                    acc[i].onclick = function () {
-                        this.classList.toggle("active");
-                        this.nextElementSibling.classList.toggle("show");
-                    }
-                }
-
-                var limit = 2;
-                $('input.single-checkbox').on('change', function (evt) {
-                    if ($(this).siblings(':checked').length >= limit) {
-                        this.checked = false;
-                    }
-                });
-
-                var chks = [];
-                getBoxes();
-
-                function getBoxes() {
-                    var form = document.getElementById("compare");
-                    var inputs = form.getElementsByTagName("input");
-
-                    for (var i = 0, len = inputs.length; i < len; i++) {
-                        if (inputs[i].type == "checkbox")
-                            chks.push(inputs[i]);
-                        inputs[i].onclick = checkBoxes;
-                    }
-                }
-
-                function checkBoxes() {
-                    var count = 0;
-                    for (var i = 0, len = chks.length; i < len; i++) {
-                        if (chks[i].checked)
-                            count++;
-                    }
-                    if (count === 2) {
-                            document.getElementById("submitBtn").disabled = false;
-                            return;
-                    }
-                    else {
-                        document.getElementById("submitBtn").disabled = true;
-                    }
-                }
-            </script>
+           <!-- As per code review (5/6/16): Moved javascript into separate file -->
+            <script type="text/javascript" src="js/search-results/compareButton.js"></script>
     </body>
 </html>     

@@ -17,7 +17,7 @@
                <div class="search" style="margin-top: 100px;">
                   <ul class="nav1" style="margin-bottom: 0px;">
                      <li id="search">
-                        <form action="./stock.php" method="get" >
+                        <form action="./search-results.php" method="get" >
                            <input type="text" name="search_string" id="search_text" placeholder="Search for Images" />
                         <div class="input-group-btn">
                            <button id="search_button" type="submit" >
