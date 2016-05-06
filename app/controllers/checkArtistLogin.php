@@ -12,7 +12,7 @@ function checkArtistLogin() {
     
     if($debug){var_dump($_SESSION);}
     //  first, check to see if user is logged in, by seeing if session even has a 'usertype' property yet
-    if(array_key_exists('userType',$_SESSION))
+    if(isset($_SESSION['email']))
     {
         //  if user is logged in, check if they're an artist
         if($_SESSION['userType'] == "Artist")

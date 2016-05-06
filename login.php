@@ -62,6 +62,24 @@ if ($email == "" || $password == "") {
         }
     }
     $_conn->close();
+    
+    //  redirect to appropriate home page
+    if (array_key_exists('userType', $_SESSION))
+    {
+        //  if user is logged in, check if they're an artist
+        if ($_SESSION['userType'] == "Artist")
+        {
+             header('Location: artist-page.php?artistID=' . $_SESSION['accountID']);
+        }
+        else if ($_SESSION['userType'] == "Customer")
+        {
+            //  TODO - when we have a customer page, fill this in
+        }
+        else if ($_SESSION['userType'] == "Admin")
+        {
+            //  TODO - when we have a admin page, fill this in
+        }
+    }
     echo '<div class="clearfix"></div><a href="index.php">Go to Home Page</a></div></div>';
 }
 
