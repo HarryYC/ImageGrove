@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <?php
-    $page_title = "product-details";
+    $page_title = "Image Compare";
     include("./includes/head.php");
     include("app/views/imageDetails/imageDetailView.php");
+
     /* 
     *   REVIEW (Marisa): The image IDs will be sent from stock.php as an array. Therefore
     *   the following $_GET variables will have to change accordingly. The array is called
@@ -17,6 +18,7 @@
     $array = $_GET['compare'];
     $mediaId1 = $array[0];
     $mediaId2 = $array[1];
+
     $imageDetails = DisplayData($mediaId1);
     $imageDetails2 = DisplayData($mediaId2);
     ?>
@@ -24,107 +26,148 @@
     $home_page = "false";
     include("./includes/header.php");
     ?>
-    <div class="container">
+    <div class="container" style="margin-top: 70px;">
         <a href="stock.php"><h4>Back</h4></a>
         <div class="row">
-            <div class="col-sm-6">
-                <h2 class="title text-left"><?php echo $imageDetails['Title']; ?></h2>
-
-                <div class="product-details">
-                    <!--product-details-->
-                    <div class="col-sm-6">
-                        <div class="view-product">
-                            <img style='height: 100%; width: 100%; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId1)); ?>" />  
-                        </div>
-                    </div>
-                </div>
-                <!--/product-details-->
-                <div class="container">
-                    <div class="row">
-                        <span style="color:black;">
-                            <div><b>ArtistName: </b><?php echo "{$imageDetails['UserName']}" ?></div>
-                            <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
-                            <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
-                            <div style="padding: 12px"> </div>
-                            <div><b>Pricing:</b></div>
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="optradio">WebPrice:$<?php echo "{$imageDetails['WebPrice']}" ?></label>
-                            </div>
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="optradio">PrintPrice:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
-                            </div>
-                            <!-- REVIEW (Marisa): Is this button disabled because Unlimited Price column is NULL in the DB? -->
-                            <!-- incorporating the review comments : This was disabled to test and was left behind. Enabling it.
-                            <div class="radio disabled">-->
-                            <div class ="radio">
-                                <label class="radio-inline"><input type="radio" name="optradio">UnlimitedPrice:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
-                            </div>
-                        </span> 
-                        <div >
-                            <button align =center type="button" class="btn btn-primary btn-sm" onclick='buyAlert()'>
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <h2 class="title text-left"><?php echo $imageDetails2['Title']; ?></h2>
-                <div class="product-details">
-                    <!--product-details-->
-                    <div class="col-sm-6">
-                        <div class="view-product">
-                            <img style='height: 100%; width: 100%; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId2)); ?>" />  
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <span style="color:black;">
-                            <div><b>ArtistName: </b><?php echo "{$imageDetails2['UserName']}" ?></div>
-                            <div><b>Web ID: </b><?php echo "{$imageDetails2['Media_Id']}" ?></div>
-                            <div><b>Description: </b><?php echo "{$imageDetails2['Description']}" ?></div>
-                            <div style="padding: 12px"> </div>
-                            <div><b>Pricing:</b></div>
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="optradio">WebPrice:$<?php echo "{$imageDetails['WebPrice']}" ?></label>
-                            </div>
-                            <div class="radio">
-                                <label class="radio-inline"><input type="radio" name="optradio">PrintPrice:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
-                            </div>
-                            <div class="radio disabled">
-                                <label class="radio-inline"><input type="radio" name="optradio">UnlimitedPrice:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
-                            </div>
-                        </span> 
-                        <div class="col-sm-12 col-lg-offset-3">
-                            <button align =center type="button" class="btn btn-primary btn-sm" onclick='buyAlert()'>
-                                Buy
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-sm-6"><h2>Image Comparison</h2></div>
         </div>
-    </div>
-</div>
+        <div class="row">
+            <div class="table-responsive">          
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="col-sm-4"><img style='height: 400px; width: 350px; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId1)); ?>" />  </th>
+                            <th class="col-sm-4"><img style='height: 400px; width: 350px; object-fit: contain' src="data:image/jpeg;base64,<?php echo base64_encode(DisplayImage($mediaId2)); ?>" />  </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-sm-3">Title</td>
+                            <td><?php echo ucfirst($imageDetails['Title']); ?></td>
+                            <td><?php echo ucfirst($imageDetails2['Title']); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Artist</td>
+                            <td><?php echo $imageDetails['UserName']; ?></td>
+                            <td><?php echo $imageDetails2['UserName']; ?></td>
+                        </tr>
+                        <tr>
+                            <td>ID #</td>
+                            <td><?php echo $imageDetails['Media_Id']; ?></td>
+                            <td><?php echo $imageDetails2['Media_Id']; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><?php echo $imageDetails['Description']; ?></td>
+                            <td><?php echo $imageDetails2['Description']; ?></td>
+                        </tr>
+                        <tr>
+                            <td>Web Price</td>
+                            <?php
+                            if ($imageDetails['WebPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails['WebPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            if ($imageDetails2['WebPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails2['WebPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            ?>
+                        </tr>
+                        <tr>
+                            <td>Print Price</td>
+                            <?php
+                            if ($imageDetails['PrintPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails['PrintPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            if ($imageDetails2['PrintPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails2['PrintPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            ?>
+                        </tr>
+                        <tr>
+                            <td>Unlimited Price</td>
+                            <?php
+                            if ($imageDetails['UnlimitedPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails['UnlimitedPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            if ($imageDetails2['UnlimitedPrice'] != NULL) {
+                                echo "<td>$" . $imageDetails2['UnlimitedPrice'] . "</td>";
+                            } else {
+                                echo "<td>Not Available</td>";
+                            }
+                            ?>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <?php if ($imageDetails['WebPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Web Price: $<?php echo "{$imageDetails['WebPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails['PrintPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Print Price: $<?php echo "{$imageDetails['PrintPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails['UnlimitedPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price: $<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                            <td>
+                                <?php if ($imageDetails2['WebPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Web Price: $<?php echo "{$imageDetails2['WebPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails2['PrintPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Print Price: $<?php echo "{$imageDetails2['PrintPrice']}" ?></label>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($imageDetails2['UnlimitedPrice'] != NULL) : ?>
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
+                                        <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price: $<?php echo "{$imageDetails2['UnlimitedPrice']}" ?></label><br>  
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr><td></td>
+                            <td>
+                                <button style='margin:15px 0 0 0; padding: 6px 18px;' type='button' class='btn_3' data-toggle='modal' data-target='#buyModal'>Buy</button>
+                            </td>
+                            <td>
+                                <button style='margin:15px 0 0 0; padding: 6px 18px;' type='button' class='btn_3' data-toggle='modal' data-target='#buyModal'>Buy</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div></div>
 
 
-
-<?php include './includes/footer.php'; ?>
-<script src="js/jquery.js"></script>
-<script src="js/price-range.js"></script>
-<script src="js/jquery.scrollUp.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/main.js"></script>
-<script>
-                        function purchaseAlert() {
-                            alert("Thank you for purchasing.");
-                        }
-                        function buyAlert() {
-                            alert("Please contact us via the Contact link above to put in an order for this item.");
-                        }
-</script>
+    <?php
+    include("app/views/imageDetails/buyModal.php");
+    ?> 
+    <?php include './includes/footer.php'; ?>
+    <script src="js/jquery.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
