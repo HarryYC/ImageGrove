@@ -27,7 +27,7 @@
     include("./includes/header.php");
     ?>
     <div class="container" style="margin-top: 70px;">
-        <a href="stock.php"><h4>Back</h4></a>
+        <!-- <a href="stock.php"><h4>Back</h4></a> -->
         <div class="row">
             <div class="col-sm-6"><h2>Image Comparison</h2></div>
         </div>
