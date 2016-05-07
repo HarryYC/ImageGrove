@@ -38,7 +38,7 @@
          </div>
          <?php
             $searchResults = SearchResultsController::searchResults('a');
-            echo "<li><form id='product_details' action='./product-details.php' method='GET'>";
+            echo "<form id='product_details' action='./product-details.php' method='GET'>";
             for ($i = 0; $i < 5; $i++) {
                 echo "
                         <div class='col-md-2 col_1'>
@@ -47,13 +47,13 @@
                             <img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:271px;height:181px;'>
                            </button></div>";
             }
-            echo "</form></li>";
+            echo "</form>";
             ?>
          <div class="col-md-2 col_1">
             <h4>New Releases</h4>
          </div>
          <?php
-            echo "<li><form id='product_details' action='./product-details.php' method='GET'>";
+            echo "<form id='product_details' action='./product-details.php' method='GET'>";
             for ($i = 5; $i < 10; $i++) {
                 echo "
                         <div class='col-md-2 col_1'>
@@ -62,7 +62,7 @@
                             <img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:271px;height:181px;'>
                            </button></div>";
             }
-            echo "</form></li>";
+            echo "</form>";
             ?>
          <div class="clearfix"> </div>
       </div>
