@@ -42,7 +42,7 @@ div.panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: 0.6s ease-in-out;
     opacity: 0;
 }
