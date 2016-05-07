@@ -11,7 +11,7 @@
     include("./includes/header.php");
 
     if (isset($_GET['search_string'])) {
-        $back_link = "stock.php?search_string={$_GET['search_string']}";
+        $back_link = "search-results.php?search_string={$_GET['search_string']}";
     } else {
         $back_link = "./index.php";
     }
@@ -45,7 +45,7 @@
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($imageDetails['UnlimitedPrice'] != NULL) : ?>
-                                    <div class="radio disabled" style="margin-top:5px; padding-left: 0px;">
+                                    <div class="radio" style="margin-top:5px; padding-left: 0px;">
                                         <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
                                     </div>
                                 <?php endif; ?>
