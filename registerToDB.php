@@ -25,7 +25,7 @@ if ($email == "" || $password == "") {
         if (mysqli_num_rows($checkResult) > 0) {
             $result = "";
         } else {
-            $sql    = "INSERT INTO Artists VALUES ('','$name','$email','$password','0')";
+            $sql    = "INSERT INTO Artists VALUES ('','$name','$email','$password','0',"")";
             $result = mysqli_query($_conn, $sql);
         }
     } else {
@@ -34,7 +34,7 @@ if ($email == "" || $password == "") {
         if (mysqli_num_rows($checkResult) > 0) {
             $result = "";
         } else {
-            $sql    = "INSERT INTO Customers VALUES ('','$name','$email','$password','0')";
+            $sql    = "INSERT INTO Customers VALUES ('','$name','$email','$password','0',"")";
             $result = mysqli_query($_conn, $sql);
         }
     }
