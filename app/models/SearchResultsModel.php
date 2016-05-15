@@ -25,6 +25,11 @@ class SearchResultsModel extends Model {
      * returns an array of Product objects
      */
 
+    function getCurrentPage($keyword, $start_from, $result_limit) {
+        $sql = "SELECT * FROM `Media_Metadata` WHERE keywords LIKE '%{$keyword}%' LIMIT {$result_limit} OFFSET {$start_from}";
+        $result = mysqli_query($this->_conn, $sql);
+        return $result;
+    }
     function getAllProductsByKeyword($keyword) {
         $sql = "SELECT * FROM `Media_Metadata` WHERE keywords LIKE '%{$keyword}%'";
         $result = mysqli_query($this->_conn, $sql);

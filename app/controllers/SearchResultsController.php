@@ -35,6 +35,12 @@ class SearchResultsController {
         $result = $model->getAllProductsByKeyword($search_string); 
         return self::resultToArray($result);
     }
+    public static function currentPage($search_string, $start_from, $result_limit) {
+        $model = new SearchResultsModel();
+        $result = $model->getCurrentPage($search_string, $start_from, $result_limit); 
+        return self::resultToArray($result);
+    }
+   
     
     public static function browseAll(){
         $model = new SearchResultsModel();

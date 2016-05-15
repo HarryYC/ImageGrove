@@ -11,7 +11,7 @@
     include("./includes/header.php");
 
     if (isset($_GET['search_string'])) {
-        $back_link = "search-results.php?search_string={$_GET['search_string']}";
+        $back_link = "search-results.php?search_string={$_GET['search_string']}&page={$_GET['page']}";
     } else {
         $back_link = "./index.php";
     }
