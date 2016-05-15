@@ -38,31 +38,31 @@
          </div>
          <?php
             $searchResults = SearchResultsController::searchResults('a');
-            echo "<form id='product_details' action='./product-details.php' method='GET'>";
+            // echo "<form id='product_details' action='./product-details.php' method='GET'>";
             for ($i = 0; $i < 5; $i++) {
-                echo "
-                        <div class='col-md-2 col_1'>
-                        
-                            <button type='submit' style='padding: 0; border: 0;' name='image_id' value={$searchResults[$i]->getMediaId()}>
-                            <img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:271px;height:181px;'>
-                           </button></div>";
+                echo "<div class='col-md-2 col_1'>"
+                . "<div class='hovereffect'>"
+                . "<img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
+                      <div class='overlay'><a class='info' href='./product-details.php?image_id={$searchResults[$i]->getMediaId()}'>More info</a>    
+                      </div>
+                      </div></div>";
             }
-            echo "</form>";
+            // echo "</form>";
             ?>
          <div class="col-md-2 col_1">
             <h4>New Releases</h4>
          </div>
          <?php
-            echo "<form id='product_details' action='./product-details.php' method='GET'>";
+            // echo "<form id='product_details' action='./product-details.php' method='GET'>";
             for ($i = 5; $i < 10; $i++) {
-                echo "
-                        <div class='col-md-2 col_1'>
-                        
-                            <button type='submit' style='padding: 0; border: 0;' name='image_id' value={$searchResults[$i]->getMediaId()}>
-                            <img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:271px;height:181px;'>
-                           </button></div>";
+                echo "<div class='col-md-2 col_1'>"
+                . "<div class='hovereffect'>"
+                . "<img src='./PHP/get.php?id={$searchResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
+                      <div class='overlay'><a class='info' href='./product-details.php?image_id={$searchResults[$i]->getMediaId()}'>More info</a>    
+                      </div>
+                      </div></div>";
             }
-            echo "</form>";
+            // echo "</form>";
             ?>
          <div class="clearfix"> </div>
       </div>
