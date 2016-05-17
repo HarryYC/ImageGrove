@@ -5,6 +5,7 @@
       include("./includes/head.php");
       include("./app/controllers/SearchResultsController.php");
       ?>
+      <link rel="stylesheet" type="text/css" href="css/hover_effects.css">
    <body>
       <?php
          $home_page = "true";
