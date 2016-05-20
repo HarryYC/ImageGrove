@@ -40,7 +40,7 @@ if ($email == "" || $password == "") {
             $row                     = $checkResult->fetch_array();
             $_SESSION['email']       = $email;
             $_SESSION['userType']    = 'Customer';
-            $_SESSION['customerID']  = $row['Customer_Id'];
+            $_SESSION['accountID']  = $row['Customer_Id'];
             $_SESSION['blockStatus'] = $row['BlockStatus'];
             $_SESSION['userName']    = $row['Name'];
             echo "Login successful!";
