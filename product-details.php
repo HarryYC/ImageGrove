@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
     <?php
-    $page_title = "product-details";
+    $page_title = "Product Details";
     include("./includes/head.php");
     include("app/views/imageDetails/imageDetailView.php");
     $mediaId = $_GET['image_id'];
@@ -29,24 +29,24 @@
                     <!--/product-details-->
                     <div class="container" >
                         <div class="row">
-                            <div style="color:black;">
-                                <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['Name']}</a>" ?></div>
+                            <div style="color:black; font-size: 1.5em;">
+                                <div><b>Artist Name: </b><?php echo "<a href=\"artist-page.php?artistID={$imageDetails['Artist_Id']}\">{$imageDetails['UserName']}</a>" ?></div>
                                 <div><b>Web ID: </b><?php echo "{$imageDetails['Media_Id']}" ?></div>
                                 <div><b>Description: </b><?php echo "{$imageDetails['Description']}" ?></div>
                                 <div><b>Pricing:</b></div>
                                 <?php if ($imageDetails['WebPrice'] != NULL) : ?>
                                     <div class="radio" style="margin-top:5px; padding-left: 0px;">
-                                        <label class="radio-inline"><input type="radio" name="optradio">Web Price:$<?php echo "{$imageDetails['WebPrice']}" ?></label>
+                                        <label class="radio-inline"><input type="radio" name="optradio">Web Price: $<?php echo "{$imageDetails['WebPrice']}" ?></label>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($imageDetails['PrintPrice'] != NULL) : ?>
                                     <div class="radio" style="margin-top:5px; padding-left: 0px;">
-                                        <label class="radio-inline"><input type="radio" name="optradio">Print Price:$<?php echo "{$imageDetails['PrintPrice']}" ?></label>
+                                        <label class="radio-inline"><input type="radio" name="optradio">Print Price: $<?php echo "{$imageDetails['PrintPrice']}" ?></label>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($imageDetails['UnlimitedPrice'] != NULL) : ?>
                                     <div class="radio" style="margin-top:5px; padding-left: 0px;">
-                                        <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price:$<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
+                                        <label class="radio-inline"><input type="radio" name="optradio">Unlimited Price: $<?php echo "{$imageDetails['UnlimitedPrice']}" ?></label><br>  
                                     </div>
                                 <?php endif; ?>
                             </div> 

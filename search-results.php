@@ -48,16 +48,32 @@
                     echo ucfirst($searchResults[$i]->getTitle())
                     . ": <input class='single-checkbox' style='float: right;' id='chkbox' type='checkbox' name='compare[]' value={$searchResults[$i]->getMediaId()} onclick='chkcontrol({$i});' /></br>";
                 }
-                echo "<br /><button style='margin:15px 0 0 0; padding: 6px 18px;' class='btn_3' id='submitBtn' type='submit'>Compare</button></form>";
+                echo "<br /><button disabled='false' style='margin:15px 0 0 0; padding: 6px 18px;' class='btn_3' id='submitBtn' type='submit'>Compare</button></form>";
                 ?>
             </div>
         </div>
         <div class="col-md-10 sap_tabs" style="padding-right: 50px;">   
             <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
                 <ul class="resp-tabs-list">
-                    <h2 class="resp-tab-item" aria-controls="tab_item-0" role="tab">
+<h2 style="visibility:hidden;" class="resp-tab-item" aria-controls="tab_item-0" role="tab">
                         <?php
-                        echo "Showing<br>";
+//                        echo "Showing<br>";
+//                        echo $start_from + 1;
+//                        echo "-";
+//                        echo $start_from + $numOfResults;
+//                        echo " of " . $totalNumOfResults;
+//                        $result = ($numOfResults == 1) ? " Result " : " Results ";
+//                        echo $result;
+//                        if (isset($_GET['search_string'])) {
+//                            echo " for \"" . $_GET['search_string'] . "\"";
+//                        }
+                        ?></h2>
+
+                    <div class="clearfix"></div>
+                </ul>
+                <div align="center" style="background-color: #3b5889; padding-top: 5px; padding-bottom: 7px;">
+                    <h3 style= "color:#fff"><?php
+                        echo "Showing ";
                         echo $start_from + 1;
                         echo "-";
                         echo $start_from + $numOfResults;
@@ -67,13 +83,11 @@
                         if (isset($_GET['search_string'])) {
                             echo " for \"" . $_GET['search_string'] . "\"";
                         }
-                        ?></h2>
-
-                    <div class="clearfix"></div>
-                </ul>
+                        ?></h3>
+                </div>
                 <!-- PAGINATION -->
                 <?php
-                echo "<div class='col-sm-6 col-sm-offset-3'>"
+                echo "<div style='margin-left: 31%;' class='col-sm-6 col-sm-offset-3'>"
                 . "<ul class='pagination'>";
                 echo "<li><a href='?search_string=" . $_GET['search_string'] . "&page=" . $prevPage . "'>Previous</a></li>";
                 for ($i = 1; $i <= $total_pages; $i++) {
@@ -92,9 +106,9 @@
                                 for ($i = 0; $i < count($currentPageResults); $i++) {
                                     list($price, $type) = SearchResultsController::findLowestPrice($currentPageResults[$i]);
                                     echo "<li>"
-                                    ."<div class='hovereffect'>"
-                                    .   "<img src='./PHP/get.php?id={$currentPageResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
-                                        <div class='overlay'><a class='info' href='./product-details.php?image_id={$currentPageResults[$i]->getMediaId()}&search_string={$_GET['search_string']}&page={$page}'>More info</a>    
+                                    . "<div class='hovereffect'>"
+                                    . "<img src='./PHP/get.php?id={$currentPageResults[$i]->getMediaId()}&type=ThumbNail' class='img-responsive' alt='' style='width:200px;height:150px;'>
+                                        <div class='overlay'><p><a class='info' href='./product-details.php?image_id={$currentPageResults[$i]->getMediaId()}&search_string={$_GET['search_string']}&page={$page}'>More info</a></p>    
                                         </div>
                                     </div>
                                     <div class='tab_desc'>
