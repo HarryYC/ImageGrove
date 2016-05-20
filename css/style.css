@@ -254,7 +254,7 @@ input:focus {
     outline:none;
 }
 .banner{
-    background:url(../images/forest.jpg)no-repeat center top;
+    background:url(../images/forest1.jpg)no-repeat center top;
     background-size: 100% 600px;
     /*-webkit-background-size:cover;*/
     -moz-background-size:cover;
@@ -262,16 +262,24 @@ input:focus {
     min-height:600px;
 }
 .span_1_of_1 {
-    padding: 10em 0 0 0;
+    padding: 15em 0 0 0;
 }
 .span_1_of_1 h2 {
     color: #FFF;
-    font-size: 2.7em;
-    margin-bottom: 2%;
+    font-size: 3em;
+    /*margin-bottom: 2%;*/
     font-weight:100;
     text-align: center;
     line-height: 1.5em;
     text-transform: uppercase;
+}
+.span_1_of_1 h3{
+    color: #FFF;
+    font-size: 1.7em;
+    margin-bottom: 2%;
+    font-weight:100;
+    text-align: center;
+    line-height: 1.5em;
 }
 .search{
     border:5px solid rgba(70, 70, 70, 0.46);
@@ -1420,7 +1428,7 @@ ul.plan-details{
         min-height: 500px;
     }
     .span_1_of_1 {
-        padding: 9em 0 0 0;
+        padding: 5em 0 0 0;
     }
     .grid_1 h3 {
         font-size: 1.7em;
